@@ -21,11 +21,21 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{derhamy2015survey}
+H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
+  frameworks for the internet of things,'' in \emph{Emerging Technologies \&
+  Factory Automation (ETFA), 2015 IEEE 20th Conference on}.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, 2015, pp. 1--8.
+
 \bibitem{thingspeak}
 ``Thingspeak, the open data platform for the internet of things,''
   \url{https://thingspeak.com/}, accessed: 2016-3-29.
 
 \bibitem{sparkfun}
 ``Sparkfun electronics,'' \url{https://www.sparkfun.com/}, accessed: 2016-3-29.
+
+\bibitem{sparkfundata}
+``Sparkfun open data cloud,'' \url{https://data.sparkfun.com/}, accessed:
+  2016-3-29.
 
 \end{thebibliography}
