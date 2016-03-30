@@ -1,0 +1,44 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Title Page
+\title{IoT and M2M: an overview on challenges and advantages}
+\author{Federico Montori [federico.montori2@unibo.it] \\ Alma Mater Studiorum - University of Bologna}
+
+
+\begin{document}
+\maketitle
+% 
+% \begin{abstract}
+% 
+% \end{abstract}
+
+\section{Introduction}
+
+\section{Motivations}
+% motivation: perchè fare questo? Il nostro framework porta il vantaggio dell'utilizzo degli open data e dei dati di cui c'è chi non può disporre per mancanza di materie prime (hardware) ed è possibile comporre i propri servizi grazie a un orchestratore (che banalmente mi trova il dato che mi serve senza che io debba per forza sapere id, cazzi e mazzi ecc...)
+% moltissimi sono i casi in cui le architetture custom propongono la loro soluzione iot based, ma questo porta a una massiccia creazione di isole indipendenti, dove le soluzioni sono spesso incompatibili tra loro (supercazzola sulle varie soluzioni sia cloud- based sia distribuite, si può parlare di alljoyn, cumulocity, xively, iotivity, thread, nimbits ..... )
+% vedi: A Survey of Commercial Frameworks for the Internet of Things (che peraltro è dei tizi di Arrowhead) 
+% un altro bel repo da cui attingere è http://www.datamation.com/open-source/35-open-source-tools-for-the-internet-of-things-3.html ( questo invece parla degli open source)
+
+\section{The power of open data}
+% noi diciamo: esistono già degli open data (più o meno open). Perchè non accomunarli in un unico framework dal quale accedervi?
+% Thingspeak, sparkfun (ne abbiamo presi 2 dei più popolari, e spariamo il grafico con qualche stats)
+\subsection*{ThingSpeak}
+ThingSpeak is an open source data platform and API for the IoT that enables the user to collect, store and analyze data as well as interact with sensors and actuators easily.
+In more detail, it provides a personal cloud that users can deploy over their Local Area Network and easily display the data produced by sensors using ThingSpeak's staightforward API.
+Furthermore, such a platform provides a global cloud hosting millions of open data records, which is useful both to users who cannot deploy their own cloud and to consumers who need to infer information coming from the stored data.
+Data is stored with an absolute freedom of expression, meaning that any data record can have any name and it does not need to stick to any format constraint.
+\\
+
+In the recent years, ThingSpeak had become very popular due to the rise of easily programmable IoT platforms such as Arduino, BeagleBone Black, ESP8266 and many others.
+Such devices are becoming cheaper and cheaper and, on the other hand, it is easier to get started with them.
+Nowadays, for instance, an ESP8266 is capable of manage a sensor, get connected through WiFi, be programmed through the simple, C-like Arduino SDK and still cost les than 5\$ while its battery, if the duty cycle is low enough, is estimated to have a duration of years.
+
+
+
+
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{bare_conf}
+\end{document}          
