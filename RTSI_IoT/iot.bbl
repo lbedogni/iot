@@ -21,6 +21,10 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{atzori2010internet}
+L.~Atzori, A.~Iera, and G.~Morabito, ``The internet of things: A survey,''
+  \emph{Computer networks}, vol.~54, no.~15, pp. 2787--2805, 2010.
+
 \bibitem{derhamy2015survey}
 H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
   frameworks for the internet of things,'' in \emph{Emerging Technologies \&

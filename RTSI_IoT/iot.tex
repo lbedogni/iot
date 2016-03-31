@@ -15,18 +15,12 @@
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 % Title Page
-\title{The power of Open Data: a proof of concept}
-\author{\IEEEauthorblockN{Federico Montori}
+\title{The power of Open Data in the Internet of Thins}
+\author{\IEEEauthorblockN{Federico Montori, Luca Bedogni
 \IEEEauthorblockA{
 Department of Computer Science and Engineering (DISI)\\
 University of Bologna, Italy\\
-Email: federico.montori2@unibo.it}
-\and
-\IEEEauthorblockN{Luca Bedogni}
-\IEEEauthorblockA{
-Department of Computer Science and Engineering (DISI)\\
-University of Bologna, Italy\\
-Email: luca.bedogni4@unibo.it}
+Email: \{federico.montori2, luca.bedogni4\}@unibo.it}}
 }
 
 
@@ -38,6 +32,14 @@ Email: luca.bedogni4@unibo.it}
 \end{abstract}
 
 \section{Introduction}
+Internet of Things (IoT) is one of the research and industrial fields that faced a rapid growth in the recent years.
+The approach to such ecosystem has been heterogeneous and sparse, leading to a wide variety of standards and solutions at each layer of the network and application stack.
+\\
+
+Since the beginning of its diffusion, its potential has been explored in various fields of application and its major usefulness has been claimed to be in service composition \cite{atzori2010internet}.
+
+
+
 
 
 
@@ -112,7 +114,7 @@ The result of the analysis is outlined in figure~\ref{geo}.
 \end{figure*}
 
 From such results it is clear the importance of information fusion from different sources, since not only the sampling number of the sensing infrastructure is incremented, but also its coverage.
-Indeed, ThingSpeak appears to have much more utilization in the european region, whereas SparkFun seems to be more popular in North America.
+Indeed, ThingSpeak appears to have much more utilization in the European region, whereas SparkFun seems to be more popular in North America.
 Furthermore, this consideration might be extended to different macro topic areas, meaning that some open data sources are specialized on a specific field of measuring.
 For instance, governmental sources providing open data such as EPA (United States Environmental Protection Agency) \cite{epa} are primarily focused on environmental data, whilst crowdsensing sources such as OpenSignal \cite{opensignal} regard measurements on cellular network signal strength and coverage.
 \\
@@ -129,8 +131,14 @@ Each stream in ThingSpeak comes with a creation date, which we reported in the d
 From such analysis it results a substantial growth in created channels.
 Some of the steeper slopes are probably justifiable.
 A possible intuition behind them is the parallel innovation in simple hardware modules, for instance August 2014 corresponds to the launch of the first version of ESP8266 on the market and in October 2014 was possible to flash its firmware though an SDK \cite{espressif}.
-Such period has not surprisingly been affected by a rapid growth according to the diagram.
+Such period has not surprisingly been affected by a rapid growth according to the diagram. [MORE EXAMPLES]
+The diagram reports also the last update date for each stream.
+It is immediately clear that, since the oldest update date is in September 2012 while the oldest creation date is in 2010, all the data streams created before 2012 that did not perform an update after such date have been deleted due to a certain policy.
+The steepness of the curve in the last days reveals that a significant amount of the data streams are still in use and updated daily or even hourly.
+\\
 
+Such analyses shed some light on how rapidly the world of open data is growing and people are gaining interest in using a platform that takes away the burden of creating a local ecosystem.
+Thus, our work creates the basis for a solid global ecosystem with a strong impact on cooperative services.
 
 
 \section{Data Unification}
