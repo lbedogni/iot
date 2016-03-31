@@ -38,4 +38,15 @@ H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
 ``Sparkfun open data cloud,'' \url{https://data.sparkfun.com/}, accessed:
   2016-3-29.
 
+\bibitem{epa}
+``United states environmental protection agency,'' \url{https://www3.epa.gov/},
+  accessed: 2016-3-29.
+
+\bibitem{opensignal}
+``Open signal,'' \url{http://opensignal.com/}, accessed: 2016-3-29.
+
+\bibitem{espressif}
+``Espressif sdk releases,'' \url{http://bbs.espressif.com/viewforum.php?f=46},
+  accessed: 2016-3-29.
+
 \end{thebibliography}
