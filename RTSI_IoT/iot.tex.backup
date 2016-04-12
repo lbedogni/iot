@@ -32,12 +32,18 @@ Email: \{federico.montori2, luca.bedogni4\}@unibo.it}}
 \end{abstract}
 
 \section{Introduction}
-Internet of Things (IoT) is one of the field in research that faced a rapid growth in the recent years.
+Internet of Things (IoT) is one of the research and industrial fields that faced a rapid growth in the recent years.
 The approach to such ecosystem has been heterogeneous and sparse, leading to a wide variety of standards and solutions at each layer of the network and application stack.
+It has been a source of interest from many differnt points of view, in such a way that now we have dedicated infrastructures at physical, data link, network, transport and application layers.
 \\
 
 Since the beginning of its diffusion, its potential has been explored in various fields of application and its major usefulness has been claimed to be in service composition \cite{atzori2010internet}.
+\\
 
+The requirements when designing IoT-related automation systems are varying due to the heterogeneity of the platforms and the hardware components as well as the network interfaces.
+This resulted in a sparse set of technologies and terminologies used in several scenarios determining a lack of interoperability among systems.
+The common approach to the problem of unifying entities within an ecosystem is typically architectural \cite{krco2014designing}
+To face these issues the European Commission 
 
 
 
@@ -108,7 +114,7 @@ The result of the analysis is outlined in figure~\ref{geo}.
 
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=0.65\textwidth]{img/map.eps} 
+\includegraphics[width=1\textwidth]{img/map.eps} 
 \caption{Location of all ThingSpeak and SparkFun sensing sources.}
 \label{geo}
 \end{figure*}
@@ -133,16 +139,31 @@ Some of the steeper slopes are probably justifiable.
 A possible intuition behind them is the parallel innovation in simple hardware modules, for instance August 2014 corresponds to the launch of the first version of ESP8266 on the market and in October 2014 was possible to flash its firmware though an SDK \cite{espressif}.
 Such period has not surprisingly been affected by a rapid growth according to the diagram. [MORE EXAMPLES]
 The diagram reports also the last update date for each stream.
-It is immediately clear that, since the oldest update date is in September 2012 while the oldest creation date is in 2010, all the data streams created before 2012 that did not perform an update after such date have been deleted due to a not specified policy.
+It is immediately clear that, since the oldest update date is in September 2012 while the oldest creation date is in 2010, all the data streams created before 2012 that did not perform an update after such date have been deleted due to a certain policy.
 The steepness of the curve in the last days reveals that a significant amount of the data streams are still in use and updated daily or even hourly.
 \\
 
 Such analyses shed some light on how rapidly the world of open data is growing and people are gaining interest in using a platform that takes away the burden of creating a local ecosystem.
-Thus, our work creates the basis for a solid global ecosystem for cooperative services.
+Thus, our work creates the basis for a solid global ecosystem with a strong impact on cooperative services.
 
 
 \section{Data Unification}
 \label{unification}
+In this section we point out the data streams' characteristics obtainable from our two open data clouds and how do we aim to unify them onto a single data cloud.
+
+Hereby are briefly presented the parameters that can be extracted from data streams:
+\begin{itemize}
+ \item \textbf{Stream ID}: it is the data stream's unique identifier. In ThingSpeak it is represented by an incremental number, which is assigned when the stream is created. On March 16, 2016 there are 28806 active streams with IDs spanning from 1 to 100172. In SparkFun the unique ID is given by a string of 20 random ASCII characters. On March 16, 2016 we counted 3575 different SparkFun IDs. 
+ \item \textbf{Stream name}: it present in both platforms and it is decided by the user with no constraint. This means that it can even carry no useful information for its identification and categorization.
+ \item \textbf{Geolocalization}: it is present in both platforms. In ThingSpeak not all the streams come with geolocalization data, however it is always given in GPS coordinates. In SparkFun all the streams are geolocalized in the metadata, however there are no GPS coordinates, but only the name of the city, or sometimes just the state or even the country, unless the user indicates the GPS coordinates in the data itself.
+ \item \textbf{Tags}: are included in both platforms and often help to infer useful information about the data.
+ \item \textbf{Creation Timestamp}: it is included in all ThingSpeak streams as a metadata, on the other hand, the creation date of a SparkFun stream is not included. Each SparkFun stream is limited to 50 MB, thus the first update of any SparkFun stream less than 50 MB corresponds to its creation date,  however it is retrievable in a limited number of cases.
+ \item \textbf{Update Timestamp}: it is included in all ThingSpeak streams as a metadata. In SparkFun is simply deducible from the timestamp of the last update in the stream, since the timestamp is included in each data update.
+ \item \textbf{Description}: it is a ThingSpeak metadata and its characterization is fully assigned to the user (who can also decide not to include it).
+ \item \textbf{Elevation}: it is a ThingSpeak metadata and not always indicated.
+ \item \textbf{Last Entry ID}: it is a ThingSpeak metadata, which points to the last update record in the data, ordered using an incremental ID for each update.
+\end{itemize}
+
 
 \section{Conclusions}
 
