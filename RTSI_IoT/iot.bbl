@@ -37,6 +37,13 @@ S.~Krco, B.~Pokric, and F.~Carrez, ``Designing iot architecture (s): A european
 \bibitem{fiware}
 ``Fi-ware open community,'' \url{https://www.fiware.org}, accessed: 2016-3-29.
 
+\bibitem{esp8266}
+``Esp 8266,'' \url{http://www.esp8266.com/}, accessed: 2016-3-29.
+
+\bibitem{espressif}
+``Espressif sdk releases,'' \url{http://bbs.espressif.com/viewforum.php?f=46},
+  accessed: 2016-3-29.
+
 \bibitem{derhamy2015survey}
 H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
   frameworks for the internet of things,'' in \emph{Emerging Technologies \&
@@ -46,6 +53,18 @@ H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
 \bibitem{thingspeak}
 ``Thingspeak, the open data platform for the internet of things,''
   \url{https://thingspeak.com/}, accessed: 2016-3-29.
+
+\bibitem{arduino}
+``Arduino,'' \url{http://www.arduino.cc/}, accessed: 2016-3-29.
+
+\bibitem{bbblack}
+``Beaglebone black,'' \url{http://beagleboard.org/black}, accessed: 2016-3-29.
+
+\bibitem{di2015design}
+A.~Di~Nisio, T.~Di~Noia, C.~Carducci, and M.~Spadavecchia, ``Design of a low
+  cost multipurpose wireless sensor network,'' in \emph{Measurements \&
+  Networking (M\&N), 2015 IEEE International Workshop on}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2015, pp. 1--6.
 
 \bibitem{sparkfun}
 ``Sparkfun electronics,'' \url{https://www.sparkfun.com/}, accessed: 2016-3-29.
@@ -60,9 +79,5 @@ H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
 
 \bibitem{opensignal}
 ``Open signal,'' \url{http://opensignal.com/}, accessed: 2016-3-29.
-
-\bibitem{espressif}
-``Espressif sdk releases,'' \url{http://bbs.espressif.com/viewforum.php?f=46},
-  accessed: 2016-3-29.
 
 \end{thebibliography}
