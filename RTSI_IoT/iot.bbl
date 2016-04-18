@@ -51,7 +51,8 @@ S.~Krco, B.~Pokric, and F.~Carrez, ``Designing iot architecture (s): A european
 \bibitem{derhamy2015survey}
 H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
   frameworks for the internet of things,'' in \emph{Emerging Technologies \&
-  Factory Automation (ETFA), 2015 IEEE 20th Conference on}.
+  Factory Automation (ETFA), 2015 IEEE 20th Conference on}.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, 2015, pp. 1--8.
 
 \bibitem{cumulocity}
 ``Cumulocity framework,'' \url{www.cumulocity.com/}, accessed:
@@ -63,22 +64,22 @@ H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
   2015-11-30.
 
 \bibitem{xively}
-``Xively,'' \url{www.xively.com/}, accessed: 2016-3-29.
+``Xively,'' \url{xively.com/}, accessed: 2016-3-29.
 
 \bibitem{omalwm2m}
 ``Open mobile alliance lightweight machine-to-machine solution,''
-  \url{openmobilealliance.org/about-oma/work-program/m2m-enablers/},
+  \url{www.openmobilealliance.org/about-oma/work-program/m2m-enablers/},
   accessed: 2016-3-29.
 
 \bibitem{thingspeak}
 ``Thingspeak, the open data platform for the internet of things,''
-  \url{https://thingspeak.com/}, accessed: 2016-3-29.
+  \url{www.thingspeak.com/}, accessed: 2016-3-29.
 
 \bibitem{arduino}
-``Arduino,'' \url{http://www.arduino.cc/}, accessed: 2016-3-29.
+``Arduino,'' \url{www.arduino.cc/}, accessed: 2016-3-29.
 
 \bibitem{bbblack}
-``Beaglebone black,'' \url{http://beagleboard.org/black}, accessed: 2016-3-29.
+``Beaglebone black,'' \url{beagleboard.org/black}, accessed: 2016-3-29.
 
 \bibitem{di2015design}
 A.~Di~Nisio, T.~Di~Noia, C.~Carducci, and M.~Spadavecchia, ``Design of a low
