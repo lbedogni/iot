@@ -44,11 +44,32 @@ S.~Krco, B.~Pokric, and F.~Carrez, ``Designing iot architecture (s): A european
 ``Espressif sdk releases,'' \url{http://bbs.espressif.com/viewforum.php?f=46},
   accessed: 2016-3-29.
 
+\bibitem{machina}
+``Global m2m market to grow to 27 billion devices, generating usd1.6 trillion
+  revenue in 2024,'' Machina Research, june 2015.
+
 \bibitem{derhamy2015survey}
 H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
   frameworks for the internet of things,'' in \emph{Emerging Technologies \&
   Factory Automation (ETFA), 2015 IEEE 20th Conference on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2015, pp. 1--8.
+
+\bibitem{cumulocity}
+``Cumulocity framework,'' \url{https://www.cumulocity.com/}, accessed:
+  2015-11-30.
+
+\bibitem{alljoyn}
+``Alljoyn framework,''
+  \url{https://allseenalliance.org/framework/documentation}, accessed:
+  2015-11-30.
+
+\bibitem{xively}
+``Xively,'' \url{https://xively.com/}, accessed: 2016-3-29.
+
+\bibitem{omalwm2m}
+``Open mobile alliance lightweight machine-to-machine solution,''
+  \url{ttp://openmobilealliance.org/about-oma/work-program/m2m-enablers/},
+  accessed: 2016-3-29.
 
 \bibitem{thingspeak}
 ``Thingspeak, the open data platform for the internet of things,''
