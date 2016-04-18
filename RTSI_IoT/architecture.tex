@@ -1,9 +1,7 @@
 \section{Our Architectural Proposal}
 \label{sec:casestudy}
 In this section we discuss the our proposal and how we intend to carry out the architectural design.
-We also give a glimpse on the case studies for this scenario in order to show why would someone use open data integration for measurement tasks.
-\\
-Figure~\ref{arch} shows an architecture depicting several use cases.
+We also give a glimpse on the case studies for this scenario in order to show why would someone use open data integration for measurement tasks. Figure~\ref{arch} shows an architecture depicting several use cases.
 
 In our proposed architecture we assume to have a decision middleware, called Orchestrator, which is capable to return a service record, or a data stream, given a set of parameters determined by the user's choice.
 Such information is returned from one among the sources available, provided that the user specified his or her preference for ``reliable'' or ``unreliable'' data, which namely corresponds to official or user-defined respectively.
@@ -22,8 +20,6 @@ Such measurements, since they are official, are considered to be reliable, howev
 Some applications indeed might require information at a finer granularity over time, for example when they want to detect instantaneous condition changes.
 In such cases the user, choosing the update frequency at the expense of reliability, will necessarily use the data or the services provided by neighbors.
 \\
-Our proposed architecture aims not only to unify raw data streams and make them universally available, but also to make users able to share their service endpoint and to provide additional capabilities derived from both data aggregation and personal computational capabilities (``Service 2'' in the figure).
-As a simple example, an user receiving temperature and humidity data might calculate the heat index and expose it as a service interface.
-\\
-Our proposal, given such a various set of use cases, provides the user with a wide variety of options regarding deployment and data retrieval.
+Our proposed architecture aims not only to unify raw data streams and make them universally available, but also to make users able to share their service endpoint and to provide additional capabilities derived from both data aggregation and personal computational capabilities (``Consumer 2'' in the figure).
+As a simple example, an user receiving temperature and humidity data might calculate the heat index and expose it as a service interface. Our proposal, given such a various set of use cases, provides the user with a wide variety of options regarding deployment and data retrieval.
 This is really important since the user is not forced to stick to a particular approach and gives a great advantage in an era where heterogeneity affects not only data and protocols, but also solutions.

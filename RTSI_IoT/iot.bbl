@@ -31,17 +31,17 @@ S.~Krco, B.~Pokric, and F.~Carrez, ``Designing iot architecture (s): A european
   on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 79--84.
 
 \bibitem{iot-a}
-``Iot-a european project,'' \url{http://www.iot-a.eu/public/front-page},
+``Iot-a european project,'' \url{www.iot-a.eu/public/front-page},
   accessed: 2016-3-29.
 
 \bibitem{fiware}
-``Fi-ware open community,'' \url{https://www.fiware.org}, accessed: 2016-3-29.
+``Fi-ware open community,'' \url{www.fiware.org}, accessed: 2016-3-29.
 
 \bibitem{esp8266}
-``Esp 8266,'' \url{http://www.esp8266.com/}, accessed: 2016-3-29.
+``Esp 8266,'' \url{www.esp8266.com/}, accessed: 2016-3-29.
 
 \bibitem{espressif}
-``Espressif sdk releases,'' \url{http://bbs.espressif.com/viewforum.php?f=46},
+``Espressif sdk releases,'' \url{bbs.espressif.com/viewforum.php?f=46},
   accessed: 2016-3-29.
 
 \bibitem{machina}
@@ -51,24 +51,23 @@ S.~Krco, B.~Pokric, and F.~Carrez, ``Designing iot architecture (s): A european
 \bibitem{derhamy2015survey}
 H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
   frameworks for the internet of things,'' in \emph{Emerging Technologies \&
-  Factory Automation (ETFA), 2015 IEEE 20th Conference on}.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, 2015, pp. 1--8.
+  Factory Automation (ETFA), 2015 IEEE 20th Conference on}.
 
 \bibitem{cumulocity}
-``Cumulocity framework,'' \url{https://www.cumulocity.com/}, accessed:
+``Cumulocity framework,'' \url{www.cumulocity.com/}, accessed:
   2015-11-30.
 
 \bibitem{alljoyn}
 ``Alljoyn framework,''
-  \url{https://allseenalliance.org/framework/documentation}, accessed:
+  \url{www.allseenalliance.org/framework/documentation}, accessed:
   2015-11-30.
 
 \bibitem{xively}
-``Xively,'' \url{https://xively.com/}, accessed: 2016-3-29.
+``Xively,'' \url{www.xively.com/}, accessed: 2016-3-29.
 
 \bibitem{omalwm2m}
 ``Open mobile alliance lightweight machine-to-machine solution,''
-  \url{ttp://openmobilealliance.org/about-oma/work-program/m2m-enablers/},
+  \url{openmobilealliance.org/about-oma/work-program/m2m-enablers/},
   accessed: 2016-3-29.
 
 \bibitem{thingspeak}
@@ -88,17 +87,17 @@ A.~Di~Nisio, T.~Di~Noia, C.~Carducci, and M.~Spadavecchia, ``Design of a low
   minus 0.4em\relax IEEE, 2015, pp. 1--6.
 
 \bibitem{sparkfun}
-``Sparkfun electronics,'' \url{https://www.sparkfun.com/}, accessed: 2016-3-29.
+``Sparkfun electronics,'' \url{www.sparkfun.com/}, accessed: 2016-3-29.
 
 \bibitem{sparkfundata}
-``Sparkfun open data cloud,'' \url{https://data.sparkfun.com/}, accessed:
+``Sparkfun open data cloud,'' \url{data.sparkfun.com/}, accessed:
   2016-3-29.
 
 \bibitem{epa}
-``United states environmental protection agency,'' \url{https://www3.epa.gov/},
+``United states environmental protection agency,'' \url{www3.epa.gov/},
   accessed: 2016-3-29.
 
 \bibitem{opensignal}
-``Open signal,'' \url{http://opensignal.com/}, accessed: 2016-3-29.
+``Open signal,'' \url{www.opensignal.com/}, accessed: 2016-3-29.
 
 \end{thebibliography}
