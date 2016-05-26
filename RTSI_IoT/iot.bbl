@@ -22,83 +22,116 @@
 \BIBdecl
 
 \bibitem{atzori2010internet}
-L.~Atzori, A.~Iera, and G.~Morabito, ``The internet of things: A survey,''
+L.~Atzori, A.~Iera, and G.~Morabito, ``{The internet of things: A survey},''
   \emph{Computer networks}, vol.~54, no.~15, pp. 2787--2805, 2010.
 
 \bibitem{krco2014designing}
-S.~Krco, B.~Pokric, and F.~Carrez, ``Designing iot architecture (s): A european
-  perspective,'' in \emph{Internet of Things (WF-IoT), 2014 IEEE World Forum
-  on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 79--84.
+S.~Krco, B.~Pokric, and F.~Carrez, ``{Designing IoT architecture (s): A
+  European perspective},'' in \emph{Internet of Things (WF-IoT), 2014 IEEE
+  World Forum on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp.
+  79--84.
 
 \bibitem{iot-a}
-``Iot-a european project,'' \url{www.iot-a.eu/public/front-page},
-  accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{IoT-A European Project}.'' [Online]. Available:
+  \url{http://www.iot-a.eu/public/front-page}
+\BIBentrySTDinterwordspacing
 
 \bibitem{fiware}
-``Fi-ware open community,'' \url{www.fiware.org}, accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{FI-WARE Open Community}.'' [Online]. Available: \url{https://www.fiware.org}
+\BIBentrySTDinterwordspacing
+
+\bibitem{arduino}
+\BIBentryALTinterwordspacing
+``{Arduino}.'' [Online]. Available: \url{http://www.arduino.cc/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{raspberry}
+\BIBentryALTinterwordspacing
+``{Raspberry Pi}.'' [Online]. Available: \url{https://www.raspberrypi.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{thingspeak}
+\BIBentryALTinterwordspacing
+``{ThingSpeak, the open data platform for the Internet of Things}.'' [Online].
+  Available: \url{https://thingspeak.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{sparkfun}
+\BIBentryALTinterwordspacing
+``{SparkFun Electronics},'' $\backslash$url{\{}https://www.sparkfun.com/{\}}.
+  [Online]. Available: \url{https://www.sparkfun.com/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{esp8266}
-``Esp 8266,'' \url{www.esp8266.com/}, accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{ESP 8266}.'' [Online]. Available: \url{http://www.esp8266.com/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{espressif}
-``Espressif sdk releases,'' \url{bbs.espressif.com/viewforum.php?f=46},
-  accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{Espressif SDK Releases}.'' [Online]. Available:
+  \url{http://bbs.espressif.com/viewforum.php?f=46}
+\BIBentrySTDinterwordspacing
 
 \bibitem{machina}
-``Global m2m market to grow to 27 billion devices, generating usd1.6 trillion
-  revenue in 2024,'' Machina Research, june 2015.
+\BIBentryALTinterwordspacing
+{Machina Research}, ``{Global M2M market to grow to 27 billion devices,
+  generating USD1.6 trillion revenue in 2024}.'' [Online]. Available:
+  \url{https://machinaresearch.com/news/global-m2m-market-to-grow-to-27-billion-devices-generating-usd16-trillion-revenue-in-2024/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{derhamy2015survey}
-H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``A survey of commercial
-  frameworks for the internet of things,'' in \emph{Emerging Technologies \&
+H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``{A survey of commercial
+  frameworks for the Internet of Things},'' in \emph{Emerging Technologies {\&}
   Factory Automation (ETFA), 2015 IEEE 20th Conference on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2015, pp. 1--8.
 
 \bibitem{cumulocity}
-``Cumulocity framework,'' \url{www.cumulocity.com/}, accessed:
-  2015-11-30.
+\BIBentryALTinterwordspacing
+``{Cumulocity Framework}.'' [Online]. Available:
+  \url{https://www.cumulocity.com/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{alljoyn}
-``Alljoyn framework,''
-  \url{www.allseenalliance.org/framework/documentation}, accessed:
-  2015-11-30.
+\BIBentryALTinterwordspacing
+``{AllJoyn Framework}.'' [Online]. Available:
+  \url{https://allseenalliance.org/framework/documentation}
+\BIBentrySTDinterwordspacing
 
 \bibitem{xively}
-``Xively,'' \url{xively.com/}, accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{Xively}.'' [Online]. Available: \url{https://xively.com/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{omalwm2m}
-``Open mobile alliance lightweight machine-to-machine solution,''
-  \url{www.openmobilealliance.org/about-oma/work-program/m2m-enablers/},
-  accessed: 2016-3-29.
-
-\bibitem{thingspeak}
-``Thingspeak, the open data platform for the internet of things,''
-  \url{www.thingspeak.com/}, accessed: 2016-3-29.
-
-\bibitem{arduino}
-``Arduino,'' \url{www.arduino.cc/}, accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{Open Mobile Alliance lightweight Machine-To-Machine solution}.'' [Online].
+  Available:
+  \url{http://openmobilealliance.org/about-oma/work-program/m2m-enablers/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{bbblack}
-``Beaglebone black,'' \url{beagleboard.org/black}, accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{BeagleBone Black}.'' [Online]. Available: \url{http://beagleboard.org/black}
+\BIBentrySTDinterwordspacing
 
 \bibitem{di2015design}
-A.~Di~Nisio, T.~Di~Noia, C.~Carducci, and M.~Spadavecchia, ``Design of a low
-  cost multipurpose wireless sensor network,'' in \emph{Measurements \&
-  Networking (M\&N), 2015 IEEE International Workshop on}.\hskip 1em plus 0.5em
-  minus 0.4em\relax IEEE, 2015, pp. 1--6.
-
-\bibitem{sparkfun}
-``Sparkfun electronics,'' \url{www.sparkfun.com/}, accessed: 2016-3-29.
-
-\bibitem{sparkfundata}
-``Sparkfun open data cloud,'' \url{data.sparkfun.com/}, accessed:
-  2016-3-29.
+A.~{Di Nisio}, T.~{Di Noia}, C.~Carducci, and M.~Spadavecchia, ``{Design of a
+  low cost multipurpose wireless sensor network},'' in \emph{Measurements {\&}
+  Networking (M{\&}N), 2015 IEEE International Workshop on}.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, 2015, pp. 1--6.
 
 \bibitem{epa}
-``United states environmental protection agency,'' \url{www3.epa.gov/},
-  accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{United States Environmental Protection Agency}.'' [Online]. Available:
+  \url{https://www3.epa.gov/}
+\BIBentrySTDinterwordspacing
 
 \bibitem{opensignal}
-``Open signal,'' \url{www.opensignal.com/}, accessed: 2016-3-29.
+\BIBentryALTinterwordspacing
+``{Open Signal}.'' [Online]. Available: \url{http://opensignal.com/}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
