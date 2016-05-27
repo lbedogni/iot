@@ -6,7 +6,7 @@ from googlemaps import Client
 
 maxPages = int(sys.argv[1])
 pageArray = []
-gmaps = Client("AIzaSyACiNaspKQH8lTCJenBSTQ9YWKy3sAw1AM")
+gmaps = Client("insert your google maps key")
 
 for i in range(maxPages):
 	page = i
@@ -43,7 +43,7 @@ for html in pageArray:
 				fw.write(", ".join(record[:4]) + ", " + str(tags) + '\n')
 				fw.close()
 			 
-			#Azerare
+			#Azzerare
 			record = ["","","","",[]]
 			city = ["","",""]
 			

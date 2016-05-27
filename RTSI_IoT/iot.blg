@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: bare_conf.bib
+Database file #1: iot.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -15,42 +15,42 @@ Database file #1: bare_conf.bib
 Done.
 You've used 20 entries,
             4039 wiz_defined-function locations,
-            888 strings with 9172 characters,
-and the built_in function-call counts, 8453 in all, are:
-= -- 634
-> -- 100
+            886 strings with 9236 characters,
+and the built_in function-call counts, 7949 in all, are:
+= -- 535
+> -- 103
 < -- 30
-+ -- 60
-- -- 14
-* -- 327
-:= -- 1299
++ -- 61
+- -- 15
+* -- 331
+:= -- 1245
 add.period$ -- 43
 call.type$ -- 20
-change.case$ -- 36
+change.case$ -- 20
 chr.to.int$ -- 72
 cite$ -- 20
-duplicate$ -- 737
-empty$ -- 858
-format.name$ -- 18
-if$ -- 1908
+duplicate$ -- 676
+empty$ -- 829
+format.name$ -- 19
+if$ -- 1750
 int.to.chr$ -- 0
 int.to.str$ -- 20
-missing$ -- 154
-newline$ -- 83
-num.names$ -- 4
-pop$ -- 454
+missing$ -- 139
+newline$ -- 115
+num.names$ -- 5
+pop$ -- 484
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 658
+skip$ -- 585
 stack$ -- 0
-substring$ -- 220
-swap$ -- 436
+substring$ -- 188
+swap$ -- 377
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 20
 warning$ -- 0
-while$ -- 20
+while$ -- 21
 width$ -- 22
-write$ -- 172
+write$ -- 190

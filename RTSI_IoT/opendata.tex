@@ -4,25 +4,27 @@
 % Thingspeak, sparkfun (ne abbiamo presi 2 dei più popolari, e spariamo il grafico con qualche stats)
 
 As stated in the introduction, open data are the most powerful source of information when such data are not producible by the utilizers themselves.
-In this section we outline some of the well-known sources that we considered in order to achieve a homogeneous data store.
+In this section we outline two well-known sources that we considered in order to achieve an homogeneous data store.
+From both sources we extracted open data in the form of data streams (or, similarly, data channels), locations relative to one user each in which such user uploads measurements produced by its sensors.
 
 \subsection{ThingSpeak}
-ThingSpeak \cite{thingspeak}, originally launched in 2010 by ioBridge, is an open source data platform and API for the IoT that enables the user to collect, store and analyze data.
+ThingSpeak \cite{thingspeak}, originally launched in 2010 by ioBridge, is an open source data platform and API for the IoT that allows the user to collect, store and analyze data.
 In more detail, it provides a personal cloud that users can deploy over their Local Area Network and easily display the data produced by sensors using ThingSpeak's straightforward API.
 Data analysis and visualization have been made possible due to the close relationship between ThingSpeak and Mathworks, Inc. since such functionalities are driven by the integrated MatLab support. 
+
 Furthermore, such a platform provides a global cloud hosting millions of open data records, called channels, which is useful both to users who cannot deploy their own cloud and to consumers who need to infer information coming from the stored data.
 Data is stored with an absolute freedom of expression, meaning that any data channel can have any name and does not need to stick to any format constraint.
 Data channels can be both private and public and provide also raw measurements encoded in XML, JSON or CSV and can be updated with new measurements every \color{red}10\color{black} 15 seconds.
 
 In the recent years, ThingSpeak had become very popular due to the rise of easily programmable IoT platforms such as Arduino \cite{arduino}, BeagleBone Black \cite{bbblack}, ESP8266 \cite{esp8266} and many others.
 Such devices are becoming cheaper and cheaper and, on the other hand, it is easier to get started with them.
-Nowadays, for instance, an ESP8266 is able to manage a sensor, get connected through WiFi, be programmed through the simple, C-like Arduino SDK and still cost less than 5\$ while its battery, if the duty cycle is low enough, is estimated to have a duration of around 7 years \cite{di2015design}.
-With a WiFi connection and an open platform such as ThingSpeak, a first home sensor network is very easy to boostrap, since the device controller does not need to have the control on the cloud and, furthermore, the data produced by the sensor is easily displayable on the end consumer's personal device, such as a Smartphone or similar.
+Nowadays, for instance, an ESP8266 is able to manage a sensor, get connected through WiFi, be programmed through the simple, C-like Arduino SDK and still cost less than 5\$ while its battery, if the duty cycle is light enough, is estimated to have a duration of around 7 years \cite{di2015design}.
+With a WiFi connection and an open platform such as ThingSpeak, a first home sensor network is very easy to bootstrap, since the device owner does not need to have the control on the cloud and, furthermore, the data produced by the sensor is easily displayable on the end consumer's personal device, such as a Smartphone or similar.
 
 \subsection{Sparkfun}
 SparkFun Electronics, Inc. \cite{sparkfun}, founded in 2003 in Colorado, is a microcontroller seller and manufacturer, known for releasing all the circuits and products as open-source hardware. \color{red} Along with the latter, it also provides\color{black} tutorials, examples and classes.
 
-For the purpose of the present paper, SparkFun also hosts its own open source cloud of open data \cite{sparkfundata}, on which the customers can test and upload the data collected by the embedded sensors.
+For the purpose of the present paper, SparkFun also hosts its own open source cloud of open data\footnote{\url{https://data.sparkfun.com/}}, on which the customers can test and upload the data collected by the embedded sensors. %\cite{sparkfundata}
 Users can push for free their data on such cloud in streams of 50 MB maximum size and with a maximum frequency of 100 pushes every 15 minutes.
-Unlike ThingSpeak, the location where the data comes from is specified at a coarse granularity since the name of the city is often obtainable, however the GPS coordinates are never given.
+Unlike ThingSpeak, the location where the data comes from is specified at a coarse granularity since the name of the city is often obtainable, however the real GPS coordinates are never given.
 On the other hand, data coming from SparkFun cannot be private and consumers can download stream contents encoded in JSON, XML, CSV, MySQL, Atom and PostgreSQL.
