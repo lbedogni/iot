@@ -13,44 +13,44 @@ Database file #1: iot.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 20 entries,
+You've used 24 entries,
             4039 wiz_defined-function locations,
-            886 strings with 9236 characters,
-and the built_in function-call counts, 7949 in all, are:
-= -- 535
-> -- 103
-< -- 30
-+ -- 61
-- -- 15
-* -- 331
-:= -- 1245
-add.period$ -- 43
-call.type$ -- 20
-change.case$ -- 20
-chr.to.int$ -- 72
-cite$ -- 20
-duplicate$ -- 676
-empty$ -- 829
-format.name$ -- 19
-if$ -- 1750
+            913 strings with 10255 characters,
+and the built_in function-call counts, 11442 in all, are:
+= -- 798
+> -- 197
+< -- 60
++ -- 111
+- -- 31
+* -- 496
+:= -- 1722
+add.period$ -- 52
+call.type$ -- 24
+change.case$ -- 24
+chr.to.int$ -- 150
+cite$ -- 24
+duplicate$ -- 919
+empty$ -- 1133
+format.name$ -- 39
+if$ -- 2572
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 139
-newline$ -- 115
-num.names$ -- 5
-pop$ -- 484
+int.to.str$ -- 24
+missing$ -- 185
+newline$ -- 129
+num.names$ -- 9
+pop$ -- 607
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 585
+skip$ -- 851
 stack$ -- 0
-substring$ -- 188
-swap$ -- 377
-text.length$ -- 6
+substring$ -- 374
+swap$ -- 574
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 20
+type$ -- 24
 warning$ -- 0
-while$ -- 21
-width$ -- 22
-write$ -- 190
+while$ -- 41
+width$ -- 26
+write$ -- 228
