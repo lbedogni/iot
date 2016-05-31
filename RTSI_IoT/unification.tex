@@ -33,9 +33,8 @@ An example is given by the streams making use of the popular DHT11 or DHT22 sens
 Data fields, both in ThingSpeak and SparkFun, also have names, which represent the only way to discriminate which field registers which measurement.
 In both platforms each measurement comes together with an integrated timestamp.
 
-From each data stream we extracted in particular the GPS position for a location analysis, finding that such position is indicated, with different degree of precision, in 6665 data streams out of 32381.
-32\% of such cases belong to SparkFun, thus, as stated before, the GPS position indicates the center of the entity (the city, or the region) where the source is located.
-The results of the analysis are outlined in figure~\ref{geo}.
+From each data stream we extracted in particular the GPS position for a location analysis, finding that such position is indicated, with different degree of precision, in 6665 data streams out of 32381 (nearly 21\%). Thingspeak accounts for a total of nearly 14\% of geolocalized data streams, while Sparkfun takes the remaining 7\%. However as stated before, the GPS position provided by SparFun indicates the center of the entity (the city, or the region) where the source is located.
+The results of the analysis are outlined in Figure~\ref{geo}.
 
 Given such results, the importance of information fusion from different sources is clear, since merging such sources not only increments the sampling number of the sensing infrastructure, but also its coverage.
 Indeed, ThingSpeak appears to have much more utilization in the European region, whereas SparkFun seems to be more popular in North America.

@@ -79,12 +79,19 @@ S.~Krco, B.~Pokric, and F.~Carrez, ``{Designing IoT architecture (s): A
 \BIBentryALTinterwordspacing
 {Machina Research}, ``{Global M2M market to grow to 27 billion devices,
   generating USD1.6 trillion revenue in 2024}.'' [Online]. Available:
-  \url{https://machinaresearch.com/news/global-m2m-market-to-grow-to-27-billion-devices-generating-usd16-trillion-revenue-in-2024/}
+  \url{https://machinaresearch.com/news/global-m2m-market-to-grow-to-27-billion-devices-generating-usd16-}
+  \url{trillion-revenue-in-2024/}
 \BIBentrySTDinterwordspacing
+
+\bibitem{CISCO2015}
+CISCO
+\newblock{"Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update 2015-2020 White Paper"}
+2016
 
 \bibitem{Khaleghi2013}
 B.~Khaleghi, A.~Khamis, F.~O. Karray, and S.~N. Razavi, ``{Multisensor data
-  fusion: A review of the state-of-the-art},'' pp. 28--44, 2013.
+  fusion: A review of the state-of-the-art}, on Journal of Information Fusion, pp. 28--44, 2013.
+
 
 \bibitem{derhamy2015survey}
 H.~Derhamy, J.~Eliasson, J.~Delsing, and P.~Priller, ``{A survey of commercial
@@ -127,8 +134,7 @@ B.~Guo, Z.~Yu, X.~Zhou, and D.~Zhang, ``{From participatory sensing to Mobile
 L.~Bedogni, M.~{Di Felice}, and L.~Bononi, ``{By train or by car? Detecting the
   user's motion type through smartphone sensors data},'' in \emph{2012 IFIP
   Wireless Days}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, nov 2012, pp.
-  1--6. [Online]. Available:
-  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=6402818}
+  1--6.
 \BIBentrySTDinterwordspacing
 
 \bibitem{Mirri2014}
