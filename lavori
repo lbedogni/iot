@@ -1,0 +1,19 @@
+- Machine learning applicato al constraint spaziale per trovare la suddivisione granulare ideale sulla base della varianza dei valori misurati. Idealmente, applicato sulle regole di base, si può arrivare alle regole che si impostano da sole partendo da constraint estremamente laschi.
+
+- Machine learning applicato al constraint temporale per trovare il timeout ideale sulla base del numero di upload per una certa area.
+
+- Routine che clusterizza i risultati molto vecchi.
+
+- Clustering per classificare i valori misurati dagli stream (now: 60%) (ASSIGNED)
+
+- Machine Learning per classificazione stream.
+
+- Portare tutto su MySQL, per unire i due mondi (ASSIGNED)
+
+- Libreria per Arduino compatibile con Crowdsensing (ASSIGNED)
+
+- Deployment LoRa
+
+- Parsing e adaptation del database dell'ARPA.
+
+- routine che periodicamente verifica che ci siano update su TS e SF (separati magari)

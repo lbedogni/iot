@@ -1,0 +1,32 @@
+\section{Related Work}
+\label{sec:rel}
+% motivation: perchè fare questo? Il nostro framework porta il vantaggio dell'utilizzo degli open data e dei dati di cui c'è chi non può disporre per mancanza di materie prime (hardware) ed è possibile comporre i propri servizi grazie a un orchestratore (che banalmente mi trova il dato che mi serve senza che io debba per forza sapere id, cazzi e mazzi ecc...)
+% moltissimi sono i casi in cui le architetture custom propongono la loro soluzione iot based, ma questo porta a una massiccia creazione di isole indipendenti, dove le soluzioni sono spesso incompatibili tra loro (supercazzola sulle varie soluzioni sia cloud- based sia distribuite, si può parlare di alljoyn, cumulocity, xively, iotivity, thread, nimbits ..... )
+% vedi: A Survey of Commercial Frameworks for the Internet of Things (che peraltro è dei tizi di Arrowhead) 
+% un altro bel repo da cui attingere è http://www.datamation.com/open-source/35-open-source-tools-for-the-internet-of-things-3.html ( questo invece parla degli open source)
+
+The IoT is nowadays growing exponentially together with the number of solutions and architectures proposed to handle it.
+The total number of connected devices is expected to be 27 billions by 2024, while the total revenue opportunity is predicted to be up to \$1.6 trillions \cite{machina} .
+Regardless of the different perspectives, it is clear that the number of devices is growing, the data is becoming more and more heterogeneous, and one of the main challenges is how to handle such an amount of data and how to give a meaning to it.
+In the recent years there has been a huge number of attempts which, most of the times, are either self-contained, since they require compliance to a specific framework, or commercial solutions.
+\\
+
+Commercial solutions aim to constitute a living ecosystem in which entities are ``plugged'' and interoperable, participating for the benefit of the whole system and fully compliant with the other actors within the environment.
+Most of the times such frameworks, some of which are depicted in \cite{derhamy2015survey}, provide efficient software adapters for legacy systems.
+Such types of frameworks are often self contained and tend to create a cluster of devices which need to be framework-compatible in order to interoperate.
+An example is Cumulocity \cite{cumulocity}, a platform providing an unified service oriented HTTP REST interface to devices.
+Another project attracting interest in recent years is AllJoyn \cite{alljoyn}, developed by the Allseen Alliance.
+Such a framework again forces devices to either implement an attachment to a software bus between applications, which is indeed the AllJoyn core, or connect to an AllJoyn router using a thin library.
+Either way, the communication introduces very low overhead and grants integration to even constrained devices.
+However, the protocol used is highly customized and makes AllJoyn a quite isolated ecosystem.
+Another example is Xively \cite{xively}, which, again, allows devices to obtain interoperability even among different application protocols (CoAP, MQTT, HTTP, XMPP and others) offering an API that implements a custom message bus.
+Finally, another ecosystem to mention is the one implemented by Open Mobile Alliance, named OMA-LwM2M \cite{omalwm2m}, which defines a custom layer over CoAP focused on exchanging instances called ``objects'' and operating upon them via the custom interfaces.
+
+As data collection and aggregation is a key point of our proposal, we also take into account context-aware computing as a valuable contribution.
+In particular, crowdsensing is higly relevant for the present work and it has been used widely with the advent of smartphones, known as Mobile Crowd Sensing (MCS).
+MCS is studied and reviewed in \cite{Guo2014}, which recalls the importance of implicit and explicit participation as well as the combination of human and machine intelligence in MCS automation systems. 
+The great amount of sensors that a smartphone is equipped with is, indeed, a valuable source of information as shown in \cite{Bedogni2012}, in which they are used to detect the user's activity related to the transportation systems.
+In such cases, useful real-time data about public transportations can be inferred.
+In another work \cite{Mirri2014}, in which also techniques of information fusion are exploited, crowdsensing is user for obstacle position retrieval and, in combination with public transportation open data, gives the best path focusing on people with disabilities.
+Such work is also dealing with trustworthiness of the data coming from the users, for which the authors claim that a machine learning approach is needed in order to exclude false positives.
+
