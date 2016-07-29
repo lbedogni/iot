@@ -108,8 +108,6 @@ def get_data_stream(list_stream):
 			l = []
 			last_update = get_last_update(stream)
 			
-			print "here"
-			
 			# Check if we have something to update
 			if last_update < data_stream[0]['timestamp']:  # ultimo update tra i dati
 				print "here2", last_update, data_stream[0]['timestamp']
@@ -216,7 +214,6 @@ def get_metadata_stream(list_stream):
 		
 			except ConnectionError:
 				pass # Questo è da fixare assolutamente pure
-		break#XXX tohglilo cazzo!!!!
 		
 		
 if __name__ == "__main__":
