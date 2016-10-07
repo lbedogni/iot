@@ -1,0 +1,81 @@
+TAB: ALL_SENSOR_DATA
+id
+user
+type (sensor)
+latitude
+longitude
+mgrs (position conversion)
+value
+timestamp
+
+TAB: ALL_TEL_DATA
+id
+user
+tech (3G, 4G, ...)
+latitude
+longitude
+mgrs (position conversion)
+operator
+strength
+timestamp
+throughput
+
+TAB: ALL_WIFI_DATA
+id
+user
+latitude
+longitude
+mgrs (position conversion)
+ssid
+bssid
+strength
+timestamp
+
+TAB: RULES
+id
+type (sensor)
+name
+mgrs_area (1m precision identifying the zone where the rule is valid)
+granularity (int, coupled with above)
+expire_count (after how many meas the rule dies)
+expire_time (after how much time the rule dies)
+sample_time
+sample_granularity (int, of course >= granularity)
+timestamp
+
+
+TAB: SENSORS
+type
+name
+mgrs_filter (basic sample_granularity)
+units
+
+TAB: STAKEHOLDERS
+id
+name
+
+TAB: STAKEHOLDERS_RULES
+id
+type (sensor)
+name
+mgrs_area (1m precision identifying the zone where the rule is valid)
+granularity (int, coupled with above)
+expire_count (after how many meas the rule dies)
+expire_time (after how much time the rule dies)
+sample_time
+sample_granularity (int, of course >= granularity)
+timestamp
+stakeholder_id
+description
+
+TAB: SUBSCRIPTION
+id
+id_user
+id_stakeholder
+sensor (type)
+
+================================================================================
+
+For TS and SF see the paper (plus class)
+
+
