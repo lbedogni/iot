@@ -1,0 +1,28 @@
+{
+	"device_id": "htjskldm9583i8pa", 
+	"device_type": "weather_station",
+	"participant_id": "Federico Montori",
+	"streams": [
+		{
+			"data_class": "TEMP",
+			"creation_timestamp": "2016-10-17T15:59:06+00:00",
+			"last_update_timestamp":  "2016-10-17T15:59:06+00:00",
+			"value": "30",
+			"unit_of_measure": "Celsius"
+		},
+		{
+			"data_class": "HUMI",
+			"creation_timestamp": "2016-10-17T15:59:06+00:00",
+			"last_update_timestamp":  "2016-10-17T15:59:06+00:00",
+			"value": "54",
+			"unit_of_measure": "Percentage"
+		},
+		{
+			"data_class": "PRES",
+			"creation_timestamp": "2016-10-17T15:59:06+00:00",
+			"last_update_timestamp":  "2016-10-17T15:59:06+00:00",
+			"value": "101325",
+			"unit_of_measure": "Pascal"
+		}
+	]
+}
