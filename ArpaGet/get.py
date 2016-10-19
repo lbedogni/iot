@@ -1,3 +1,4 @@
+# Usage: ./filename province comma-separated-date-start comma-separated-date-end
 #!/usr/bin/python3
 import urllib.request
 import sys
