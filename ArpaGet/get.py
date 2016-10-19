@@ -1,4 +1,5 @@
 # Usage: ./filename province comma-separated-date-start comma-separated-date-end
+# Example: ./get.py RE 10.10.2016 19.10.2016
 #!/usr/bin/python3
 import urllib.request
 import sys
