@@ -1,0 +1,21 @@
+{
+	"device_id": "kfldo95jfoienh95", 
+	"device_type": "weather_station",
+	"participant_id": "Luca Bedogni",
+	"streams": [
+		{
+			"data_class": "TEMP",
+			"creation_timestamp": "2016-10-17T16:58:53+00:00",
+			"last_update_timestamp":  "2016-10-17T16:58:53+00:00",
+			"value": "34",
+			"unit_of_measure": "Celsius"
+		},
+		{
+			"data_class": "NOIS",
+			"creation_timestamp": "2016-10-17T16:58:53+00:00",
+			"last_update_timestamp": "2016-10-17T16:58:53+00:00",
+			"value": "-43",
+			"unit_of_measure": "Decibel"
+		}
+	]
+}
