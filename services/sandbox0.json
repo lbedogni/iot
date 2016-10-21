@@ -2,6 +2,9 @@
 	"device_id": "htjskldm9583i8pa", 
 	"device_type": "weather_station",
 	"participant_id": "Federico Montori",
+	"radius": "200",
+	"latitude": "44.345676",
+	"longitude": "11.948374",
 	"streams": [
 		{
 			"data_class": "TEMP",

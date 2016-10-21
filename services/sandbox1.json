@@ -2,6 +2,9 @@
 	"device_id": "kfldo95jfoienh95", 
 	"device_type": "weather_station",
 	"participant_id": "Luca Bedogni",
+	"radius": "0",
+	"latitude": "44.000897",
+	"longitude": "11.111645",
 	"streams": [
 		{
 			"data_class": "TEMP",

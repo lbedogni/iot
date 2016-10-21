@@ -27,19 +27,10 @@ def sandbox(number=None):
 	
 	for stream in jason['streams']:
 		stream['value'] = random() * 100
-		stream['timestamp'] = str(datetime.datetime.fromtimestamp(notnow).isoformat())
+		stream['last_update_timestamp'] = str(datetime.datetime.fromtimestamp(notnow).isoformat())
 	
 	return json.dumps(jason, separators=(',',':'))
 
 if __name__ == "__main__":
-	
-	jason = readJson("0")
-	now = time()
-	notnow = now - (now%1200)
-	
-	
-	for stream in jason['streams']:
-		stream['value'] = random() * 100
-		stream['timestamp'] = str(notnow)
-	
+		
 	app.run(host='130.136.37.231', port=10014)
