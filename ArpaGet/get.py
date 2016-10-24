@@ -50,8 +50,11 @@ def get_timestamps(beg, end):
 	if len(end.split(" ")) == 1:
 		end += " 00.00.00"
 	time_beg = time.strptime(beg, "%d/%m/%Y %H.%M.%S")
-	time_end = time.strptime(end, "%d/%m/%Y %H.%M.%S")	
-	return int(time.mktime(time_beg)), int(time.mktime(time_beg))
+	time_end = time.strptime(end, "%d/%m/%Y %H.%M.%S")
+	
+	#int(time.mktime(time_beg)) is in milliseconds
+	
+	return time.strftime("%Y-%m-%d %H:%M:%S", time_beg), time.strftime("%Y-%m-%d %H:%M:%S", time_end)
 
 rawdata = BeautifulSoup(urllib.request.urlopen("http://www.arpae.it/v2_rete_di_monitoraggio.asp?p="+str(PROV)+"&idlivello=1637").read(), 'html.parser')
 items = rawdata.find('div', {'id':'dettaglio'}).p.findAll()
@@ -101,6 +104,9 @@ for stat in stations:
 			cursor.execute("INSERT INTO Devices(ID, name, device_type, participant_ID) \
 				VALUES ('%s', '%s', '%s', '%s')" % (dev_id, dev_id, "GOVERN", "3"))
 			db.commit()
+			print("Device inserted")
+		else:
+			print("We already got this device")
 	except:
 		db.rollback()
 		print(traceback.format_exc())
@@ -126,6 +132,7 @@ for stat in stations:
 				# re-execute the query to get the stream ID
 				cursor.execute("SELECT ID from DataStreams WHERE (device_ID = '" + dev_id + "' AND data_class = '" + data_class + "')")
 				stream_ID = cursor.fetchall()[0][0]
+				print("Stream inserted")
 			else:
 				stream_ID = ans[0][0]
 				print("We already got this stream")
@@ -149,12 +156,19 @@ for stat in stations:
 			
 			# insert the measurement if it is not yet registered
 			try: 
-				cursor.execute("SELECT ID from Measurements WHERE (timestamp = '" + str(date_end) + "')")
+				cursor.execute("SELECT ID from Measurements WHERE (timestamp = '" + date_end + "')")
 				if len(cursor.fetchall()) == 0:
 					cursor.execute("INSERT INTO Measurements(data_stream_ID, GPS_latitude, GPS_longitude, MGRS_coordinates, value, timestamp) \
-						VALUES ('%s', '%s', '%s', '%s', '%s', '%s')" % (stream_ID, lat, lng, "-1", value, str(date_end)))
+						VALUES ('%s', '%s', '%s', '%s', '%s', '%s')" % (stream_ID, lat, lng, "-1", value, date_end))
 					db.commit()
+					print("Values inserted")
+					
+					# update the last update timestamp
+					cursor.execute("UPDATE DataStreams SET last_update_timestamp = '%s' WHERE ID = '%s'" % (date_end, stream_ID))
+					db.commit()
+					print("Values updated")
 				else:
+					print("Values duplicate")
 					continue
 			except:
 				db.rollback()
