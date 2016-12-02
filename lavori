@@ -4,16 +4,14 @@
 
 - Routine che clusterizza i risultati molto vecchi.
 
-- Clustering per classificare i valori misurati dagli stream (now: 60%) (ASSIGNED)
+- Algebra per la parte geografica (MGRS)
 
-- Machine Learning per classificazione stream.
+- Combinazione dei servizi in un'algebra più potente, poi poter utilizzare altri servizi come data stream in input.
 
-- Portare tutto su MySQL, per unire i due mondi (ASSIGNED)
-
-- Libreria per Arduino compatibile con Crowdsensing (ASSIGNED)
+- Classificazione stream: perfezionamento dell'algoritmo e implementazione collaborativa.
 
 - Deployment LoRa
 
 - Parsing e adaptation del database dell'ARPA.
 
-- routine che periodicamente verifica che ci siano update su TS e SF (separati magari)
+- routine che periodicamente verifica che ci siano update su TS e SF (separati magari) (ASSIGNED)
