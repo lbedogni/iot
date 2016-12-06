@@ -74,7 +74,6 @@ db = pymysql.connect("localhost","SenSquare","mgrs32TPQ","SenSquare" )
 cursor = db.cursor()
 
 for stat in stations:
-	print("http://www.arpae.it/v2_rete_di_monitoraggio.asp?p="+str(PROV)+"&s="+str(stat.get('value'))+"&idlivello=1637")
 	try:
 		rawdata = BeautifulSoup(urllib.request.urlopen("http://www.arpae.it/v2_rete_di_monitoraggio.asp?p="+str(PROV)+"&s="+str(stat.get('value'))+"&idlivello=1637").read(), 'html.parser')
 		items = rawdata.find('div', {'id':'dettaglio'}).p.findAll()
@@ -85,7 +84,7 @@ for stat in stations:
 	lat = lng = -1
 	for item in ii:
 		if "Indirizzo" in str(item):
-			dev_id = (PROV + "_" + item.split("</b>")[1].strip())[0:32]
+			dev_id = (PROV + "_" + item.split("</b>")[1].strip().replace("'", ""))[0:32]
 		if "Latitudine" in str(item):
 			lat = item.split("</b>")[1].strip()
 		if "Longitudine" in str(item):
@@ -122,6 +121,7 @@ for stat in stations:
 			
 		# insert the stream if it is not yet registered
 		try: 
+			print ("SELECT ID from DataStreams WHERE (device_ID = '" + dev_id + "' AND data_class = '" + data_class + "')")
 			cursor.execute("SELECT ID from DataStreams WHERE (device_ID = '" + dev_id + "' AND data_class = '" + data_class + "')")
 			ans = cursor.fetchall()
 			if len(ans) == 0:
@@ -153,10 +153,10 @@ for stat in stations:
 			instr = str(items[3].text)
 			value = str(items[4].text)
 			unit = str(items[5].text)
-			
+
 			# insert the measurement if it is not yet registered
 			try: 
-				cursor.execute("SELECT ID from Measurements WHERE (timestamp = '" + date_end + "')")
+				cursor.execute("SELECT ID from Measurements WHERE (timestamp = '%s' AND data_stream_ID = '%s')" % (date_end, stream_ID))
 				if len(cursor.fetchall()) == 0:
 					cursor.execute("INSERT INTO Measurements(data_stream_ID, GPS_latitude, GPS_longitude, MGRS_coordinates, value, timestamp) \
 						VALUES ('%s', '%s', '%s', '%s', '%s', '%s')" % (stream_ID, lat, lng, "-1", value, date_end))

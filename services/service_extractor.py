@@ -10,9 +10,9 @@ db = None
 cur = None
 
 db = MySQLdb.connect(host="localhost",    # your host, usually localhost
-	user="davidek",         # your username
-	passwd="tesiCRESTINI2016",  # your password
-	db="sensquare")        # name of the data base
+	user="SenSquare",         # your username
+	passwd="mgrs32TPQ",  # your password
+	db="SenSquare")        # name of the data base
 # you must create a Cursor object. It will let
 #  you execute all the queries you need
 cur = db.cursor()
@@ -46,10 +46,10 @@ def extractService(number):
 		creation = str(record[3])
 		last_update = str(record[4])
 		
-		cur.execute("SELECT unit_of_measure FROM `DataClasses` WHERE ID = '" + data_class + "'")
+		cur.execute("SELECT * FROM `DataClasses` WHERE ID = '" + data_class + "'")
 		dc = cur.fetchall()
 		if len(dc) > 0:
-			unit_of_measure = dc[0][0]
+			unit_of_measure = dc[0][2]
 		else:
 			unit_of_measure = ""
 		
@@ -71,6 +71,13 @@ def extractService(number):
 		jason['streams'].append(stream)
 		jason['latitude'] = str(lat)
 		jason['longitude'] = str(lon)
+
+	cur.execute("SELECT * FROM `Devices` WHERE ID = '" + number + "'")
+	dev = cur.fetchall()
+	if len(dev) > 0:
+		jason['device_id'] = dev[0][0]
+		jason['device_type'] = dev[0][2]
+		jason['participant_id'] = str(dev[0][3])
 		
 	return jason
 	
@@ -85,9 +92,9 @@ def extract(number=None):
 	notnow = now - (now % 1200)
 	
 	
-	for stream in jason['streams']:
-		stream['value'] = random() * 100
-		stream['last_update_timestamp'] = str(datetime.datetime.fromtimestamp(notnow).isoformat())
+	#for stream in jason['streams']:
+		#stream['value'] = random() * 100
+		#stream['last_update_timestamp'] = str(datetime.datetime.fromtimestamp(notnow).isoformat())
 
 	return json.dumps(jason, separators=(',',':'))
 
@@ -95,4 +102,4 @@ if __name__ == "__main__":
 	
 
 		
-	app.run(host='130.136.37.231', port=10016)
+	app.run(host='130.136.37.15', port=10016)

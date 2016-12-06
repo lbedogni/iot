@@ -1,6 +1,6 @@
 from flask import Flask
 import json
-from random import random
+from random import random, gauss
 from time import time
 import datetime
 app = Flask(__name__)
@@ -26,11 +26,14 @@ def sandbox(number=None):
 	
 	
 	for stream in jason['streams']:
-		stream['value'] = random() * 100
+		if stream['data_class'] == 'TEMP':
+			stream['value'] = gauss(14.0,1.4)
+		else:
+			stream['value'] = random() * 100
 		stream['last_update_timestamp'] = str(datetime.datetime.fromtimestamp(notnow).isoformat())
 	
 	return json.dumps(jason, separators=(',',':'))
 
 if __name__ == "__main__":
 		
-	app.run(host='130.136.37.231', port=10014)
+	app.run(host='130.136.37.15', port=10014)
