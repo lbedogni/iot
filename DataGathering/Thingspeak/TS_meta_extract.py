@@ -167,7 +167,10 @@ if __name__ == "__main__":
 	init()
 	
 	start = dbcalls.getThingspeakNextChannel()
-	limit = 300
+	if start < 190000:
+		limit = 200000
+	else:
+		limit = 300
 
 	if start < 0:
 		print "bad error"
