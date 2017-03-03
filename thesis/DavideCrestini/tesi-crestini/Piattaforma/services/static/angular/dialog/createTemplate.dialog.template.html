@@ -1,0 +1,284 @@
+<md-dialog aria-label="List dialog" id="template-dialog" layout="column" flex="30" > 
+    <md-dialog-content  layout="column" layout="center center" >
+    	<md-toolbar>
+    		<h2 class="md-toolbar-tools md-dialog-title">
+    			Create new template
+    		</h2>
+    	</md-toolbar>
+    	<md-content layout="column" class="md-padding">
+            <form id="template-form">
+            <div layout="column">
+                <div layout="column">
+                    <div layout="row">
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>Title</label>
+                            <input type="text" ng-model="template.title" required>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>Value type</label>
+                            <md-select ng-model="template.output_type">
+                                <md-option ng-repeat="type in types" value="[[type]]" >
+                                     [[ type ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                    </div>  
+                    
+                    <!-- Prima regola-->
+                    <div layout="row">
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.first.firstclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]" >
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.first.firstclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.first.firstCostant">
+                        </md-input-container >
+                        <md-input-container>
+                            <label>Operator</label>
+                            <md-select ng-model="rules.first.operand">
+                                <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.first.secondclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]">
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.first.secondclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.first.secondCostant">
+                        </md-input-container flex>   
+                    </div>
+                </div>
+                <!-- Operando di congiunzione tra prima e seconda regola -->
+                <div layout="row" ng-if="rulesNumber > 1">
+                    <md-input-container flex>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Operator</label>
+                        <md-select ng-model="rules.first.connective">
+                            <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                            </md-option>
+                        </md-select>
+                    </md-input-container> 
+                    <md-input-container flex>
+                    </md-input-container>
+                </div>
+                <!-- Seconda riga di regole -->
+                <div layout="row" ng-if="rulesNumber > 1">
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.second.firstclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]" >
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.second.firstclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.second.firstCostant">
+                        </md-input-container flex>
+                        <md-input-container>
+                            <label>Operator</label>
+                            <md-select ng-model="rules.second.operand">
+                                <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.second.secondclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]">
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.second.secondclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.second.secondCostant">
+                        </md-input-container flex> 
+                </div>
+                <!-- Operando di congiunzione tra seconda e terza regola -->
+                <div layout="row" ng-if="rulesNumber > 2">
+                    <md-input-container flex>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Operator</label>
+                        <md-select ng-model="rules.second.connective">
+                            <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                            </md-option>
+                        </md-select>
+                    </md-input-container> 
+                    <md-input-container flex>
+                    </md-input-container>
+                </div>
+                <!-- Terza riga di regole -->
+                <div layout="row" ng-if="rulesNumber > 2">
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.third.firstclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]" >
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                         <md-input-container ng-if="rules.third.firstclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.third.firstCostant">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Operator</label>
+                            <md-select ng-model="rules.third.operand">
+                                <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.third.secondclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]">
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.third.secondclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.third.secondCostant">
+                        </md-input-container> 
+                </div>
+                <!-- Operando di congiunzione tra terza e quarta regola -->
+                <div layout="row" ng-if="rulesNumber > 3">
+                    <md-input-container flex>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Operator</label>
+                        <md-select ng-model="rules.third.connective">
+                            <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                            </md-option>
+                        </md-select>
+                    </md-input-container> 
+                    <md-input-container flex>
+                    </md-input-container>
+                </div>
+                <!-- Quarta riga di regole -->
+                <div layout="row" ng-if="rulesNumber > 3">
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.fourth.firstclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]" >
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.fourth.firstclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.fourth.firstCostant">
+                        </md-input-container> 
+                        <md-input-container>
+                            <label>Operator</label>
+                            <md-select ng-model="rules.fourth.operand">
+                                <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.fourth.secondclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]">
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.fourth.secondclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.fourth.secondCostant">
+                        </md-input-container> 
+               
+                </div>
+                <!-- Operando di congiunzione tra quarta e quint< regola -->
+                <div layout="row" ng-if="rulesNumber > 4">
+                    <md-input-container flex>
+                    </md-input-container>
+                    <md-input-container flex>
+                        <label>Operator</label>
+                        <md-select ng-model="rules.fourth.connective">
+                            <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                            </md-option>
+                        </md-select>
+                    </md-input-container> 
+                    <md-input-container flex>
+                    </md-input-container>
+                </div>
+                <!-- Quinta riga di regole -->
+                <div layout="row" ng-if="rulesNumber > 4">
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.fifth.firstclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]" >
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.fifth.firstclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.fifth.firstCostant">
+                        </md-input-container> 
+                        <md-input-container>
+                            <label>Operator</label>
+                            <md-select ng-model="rules.fifth.operand">
+                                <md-option ng-repeat="operand in operands" value="[[operand]]">
+                                    [[ operand ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Sensor</label>
+                            <md-select ng-model="rules.fifth.secondclass">
+                                <md-option ng-repeat="classe in classes" value="[[classe]]">
+                                     [[ classe ]]
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+                        <md-input-container ng-if="rules.fifth.secondclass == 'Constant'" flex>
+                            <label>Insert the constant value</label>
+                            <input type="number" ng-model="rules.fifth.secondCostant">
+                        </md-input-container> 
+                    </div>
+                    <div layout="row">
+                            <md-button ng-click="increaseRulesNumber()" class="md-raised md-confirm-button" flex> 
+                                Add rule
+                            </md-button> 
+                            <md-button ng-click="decreaseRulesNumber()" class="md-raised md-cancel-button" flex> 
+                                Remove last rule
+                            </md-button> 
+                    </div>
+                </div>
+            </form> 
+    	</md-content>    
+    </md-dialog-content> 
+    <md-dialog-actions class="md-dialog-footer"> 
+        <md-button ng-click="createTemplate()" class="md-raised md-confirm-button"> 
+            Create
+        </md-button> 
+        <md-button ng-click="closeDialog()" class="md-raised  md-cancel-button"> 
+            Cancel 
+        </md-button> 
+    </md-dialog-actions> 
+</md-dialog>

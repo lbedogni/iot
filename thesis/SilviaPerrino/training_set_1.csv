@@ -1,0 +1,601 @@
+airpressure,Pressure
+insidetemp,Temperature
+outsidetemp,Temperature
+hum,Humidity
+light,Brightness
+pressure,Pressure
+temp,Temperature
+time,Time
+humidity,Humidity
+temp,Temperature
+temp,Temperature
+time,Time
+battery,Battery_Level
+humidity,Humidity
+temp,Temperature
+humidity,Humidity
+temp,Temperature
+Pad Temperature,Temperature
+Ambient Temperature,Temperature
+Humidity Inside,Humidity
+Light Inside,Brightness
+Temp Inside,Temperature
+green,Colour
+blue,Colour
+red,Colour
+Tank Temp,Temperature
+Hood Temp,Temperature
+Room Temp,Temperature
+PH,PH
+Hum,Humidity
+Temperatur,Temperature
+FreezerTemp,Temperature
+Temperature (C),Temperature
+Pressure (hPa),Pressure
+Light  Intensity,Brightness
+Voltage,Voltage
+Temperature,Temperature
+LightSensor,Brightness
+Temperature,Temperature
+Temperature,Temperature
+Light,Brightness
+Temperature,Temperature
+display tank temperature,Temperature
+room temperature,Temperature
+ph,PH
+outsideTemp,Temperature
+insideTemp,Temperature
+outsideTemp,Temperature
+insideTemp,Temperature
+Target Temperature,Temperature
+Outdoor Temperature,Temperature
+Indoor Temperature,Temperature
+Power using a hour,Power
+Power using now,Power
+Humidity,Humidity
+Temperature,Temperature
+vent_temp,Temperature
+temp,Temperature
+luftfeuchte,Humidity
+temp,Temperature
+humidity,Humidity
+temp,Temperature
+temp_f,Temperature
+humidity,Humidity
+idx,Heat_Index
+temp,Temperature
+humidity,Humidity
+temp,Temperature
+temp,Temperature
+humidity,Humidity
+temp,Temperature
+Memory Available (mb),Memory
+CPU Usage (percent),CPU_Usage
+Temperatura em Celsius,Temperature
+humidity,Humidity
+sunlight,Brightness
+temperature,Temperature
+Light Level,Brightness
+Temperature,Temperature
+Humidity,Humidity
+Light Level,Brightness
+Roof,Temperature
+Internal,Temperature
+Light Sensor,Brightness
+Random Number,Count
+Temperature,Temperature
+Time,Time
+Temperature,Temperature
+Time,Time
+Latitude,Geolocalization
+Velocidade,Speed
+Longitude,Geolocalization
+Disk Space,Memory
+Hours,Time
+Rate,Rate
+BTUs,Heat_Index
+Loop Temp,Temperature
+Room Temperature,Temperature
+Dollar Amount,Price
+Rate,Rate
+Display Tank Temperature,Temperature
+Room Temperature,Temperature
+pH,PH
+piezo,Current
+datatime,Time
+h0,Humidity
+h1,Humidity
+h2,Humidity
+h3,Humidity
+l0,Brightness
+l1,Brightness
+l2,Brightness
+l3,Brightness
+t0,Temperature
+t1,Temperature
+t2,Temperature
+t3,Temperature
+humidity,Humidity
+temp,Temperature
+humi,Humidity
+temp,Temperature
+Controller Temp,Temperature
+Hood Temp,Temperature
+PH,PH
+Tank Temp,Temperature
+Dollar Amount,Price
+temp,Temperature
+Temperatura,Temperature
+Tempo,Time
+Light Level,Brightness
+Light intensity,Brightness
+Tank temperature,Temperature
+Motion,Motion
+Testing Temp,Temperature
+Temperature ,Temperature
+Temperature ,Temperature
+Humidity,Humidity
+Temp,Temperature
+RSSI,RSSI
+Temperature (degC),Temperature
+LQI,LQI
+Color,Colour
+Temperature,Temperature
+time,Time
+light,Brightness
+temperature,Temperature
+temp,Temperature
+cl1,Price
+ng1,Price
+time,Time
+temp,Temperature
+r1,Humidity
+r2,Humidity
+r3,Humidity
+r4,Humidity
+r5,Humidity
+r6,Humidity
+r7,Humidity
+r8,Humidity
+r9,Humidity
+t1,Temperature
+t2,Temperature
+t3,Temperature
+t4,Temperature
+t5,Temperature
+t6,Temperature
+t7,Temperature
+t8,Temperature
+t9,Temperature
+rssi,RSSI
+temp,Temperature
+air_temp,Temperature
+cpu_temp,Temperature
+temp,Temperature
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainmm,Rain_Index
+dewptc,Rain_Index
+humidity,Humidity
+light_lvl,Brightness
+rainmm,Rain_Index
+tempc,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustkmh,Speed
+windgustkmh_10m,Speed
+windspdkmh_avg2m,Speed
+windspeedkmh,Speed
+ph,PH
+v_batt,Battery_Level
+humidity,Humidity
+temp1,Temperature
+temp2,Temperature
+temp,Temperature
+temp_frem,Temperature
+temp_retur,Temperature
+volt,Voltage
+relative_humidity,Humidity
+temperature_in_celsius,Temperature
+temp,Temperature
+humidity,Humidity
+temperature,Temperature
+price,Price
+snapshot_time,Time
+Temperature,Temperature
+Temperature,Temperature
+Humidity,Humidity
+Time,Time
+Rain,Rain_Index
+Wind,Wind
+Room temperature,Temperature
+Tank temperature,Temperature
+pH,PH
+Pressure,Pressure
+Humidity,Humidity
+Temperature,Temperature
+Memory Available (mb) ,Memory
+CPU Usage (percent) ,CPU_Usage
+TempC,Temperature
+Temperature,Temperature
+Money,Price
+Temp,Temperature
+Light,Brightness
+Temp,Temperature
+Time,Time
+Memory Available (mb),Memory
+CPU Usage %,CPU_Usage
+Temperature,Temperature
+Humidity %,Humidity
+Temperature C,Temperature
+Utility Power Down,Power
+Temperature,Temperature
+current1,Current
+current2,Current
+voltage1,Voltage
+voltage2,Voltage
+gas,Gas_Level
+humidity,Humidity
+light,Brightness
+tempc,Temperature
+tempf,Temperature
+rawtemp,Temperature
+airtemp,Temperature
+humidity,Humidity
+light,Brightness
+pressure,Pressure
+rain,Rain_Index
+streamtemp,Temperature
+vbatt,Battery_Level
+winddir,Wind
+windspeed,Speed
+degrees,Temperature
+hectopascals,Pressure
+humidity,Humidity
+humidity,Humidity
+temperature,Temperature
+a_pressure,Pressure
+a_temperature,Temperature
+pulse_electric,Voltage
+ctwatts,Power
+meterwatts,Power
+temp,Temperature
+watts,Power
+dust,Dust_Level
+hum,Humidity
+press,Pressure
+temp,Temperature
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+rainin,Rain_Index
+tempf,Temperature
+timestamp,Time
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+relative_humidity,Humidity
+temperature_in_celsius,Temperature
+barotemp,Temperature
+hectopascals,Pressure
+humidity,Humidity
+tempf,Temperature
+barometer,Pressure
+humidity,Humidity
+light,Brightness
+moisture,Humidity
+rainfall,Rain_Index
+soiltemp,Temperature
+temperature,Temperature
+winddirection,Wind
+windgust,Speed
+windgustdir,Speed
+windspeed,Speed
+Server Temp,Temperature
+Outside Temperature,Temperature
+Light,Brightness
+Humidity,Humidity
+Degrees F,Temperature
+Temp,Temperature
+Btu's,Heat_Index
+HX Out,Heat_Index
+HX In,Heat_Index
+Gallons Flowed,Capacity
+Sensor 2,Temperature
+Sensor 3,Temperature
+Sensor 1,Temperature
+Temperatura,Temperature
+Humidade,Humidity
+Pixel Distance,Distance
+DS1820 Temp (F),Temperature
+Humidity,Humidity
+Dewpoint,Temperature
+TempC,Temperature
+temp,Temperature
+Light,Brightness
+Temperature,Temperature
+Temperature,Temperature
+Ambient Light,Brightness
+Soil Humidity,Humidity
+Temperature,Temperature
+Humidity / %,Humidity
+Temperature / °C,Temperature
+Temperature,Temperature
+GageHeight,Height
+Rating,Rate
+lostTime,Time
+downTime,Time
+Temperature ,Temperature
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementtime,Time
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+time,Time
+humidity,Humidity
+temp,Temperature
+relative_humidity,Humidity
+temperature_in_celsius,Temperature
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementtime,Time
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+humidity,Humidity
+tempf,Temperature
+temp,Temperature
+dewpoint,Temperature
+heatindex,Temperature
+humidity,Humidity
+temperature,Temperature
+bottom,Temperature
+middle,Temperature
+timestamp,Time
+top,Temperature
+humidity,Humidity
+pressure,Pressure
+temp,Temperature
+hum,Humidity
+temp,Temperature
+lux,Brightness
+temp,Temperature
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementTime,Time
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementtime,Time
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+temp,Temperature
+batterypercent,Battery_Level
+soilmoistpercent,Humidity
+soilmoistvalue,Humidity
+stempc,Temperature
+stempf,Temperature
+uvindex,UV
+settemperature,Temperature
+temperature,Temperature
+humidity,Humidity
+tempf,Temperature
+hidx,Heat_Index
+hidx2,Heat_Index
+hum,Humidity
+hum2,Humidity
+temp,Temperature
+temp2,Temperature
+time,Time
+humidity,Humidity
+temp,Temperature
+millis,Time
+temp,Temperature
+hidx1,Heat_Index
+hidx2,Heat_Index
+hum1,Humidity
+hum2,Humidity
+temp1,Temperature
+temp2,Temperature
+time,Time
+humidity,Humidity
+light,Brightness
+temperature,Temperature
+temp,Temperature
+gas,Gas_Level
+motion,Motion
+time,Time
+ch01,Energy
+ch02,Energy
+ch03,Energy
+ch04,Energy
+ch05,Energy
+ch06,Energy
+ch07,Energy
+ch08,Energy
+ch09,Energy
+ch10,Energy
+hidx,Heat_Index
+hum,Humidity
+temp,Temperature
+MaxTemp,Temperature
+MinTemp,Temperature
+Temp,Temperature
+temp1,Temperature
+temp2,Temperature
+temp1,Temperature
+Temperature ,Temperature
+Degrees Fahrenheit,Temperature
+Degrees Fahrenheit,Temperature
+Degrees Fahrenheit,Temperature
+LUX,Brightness
+Dollar amount of refund,Price
+Waterbed temp,Temperature
+Bedroom temp,Temperature
+Dollar Amount,Price
+gas,Gas_Level
+power,Power
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementtime,Time
+rainin,Rain_Index
+solarradiation,Brightness
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+temperature1,Temperature
+temperature2,Temperature
+temperature3,Temperature
+temperature4,Temperature
+temperature5,Temperature
+temperature6,Temperature
+humidity,Humidity
+temperature,Temperature
+humidity,Humidity
+temp,Temperature
+time,Time
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementtime,Time
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+time,Time
+t1,Temperature
+t2,Temperature
+t3,Temperature
+t4,Temperature
+t5,Temperature
+t6,Temperature
+tr,Temperature
+tv,Temperature
+baromin,Pressure
+batt_lvl,Battery_Level
+dailyrainin,Rain_Index
+dewptf,Temperature
+humidity,Humidity
+light_lvl,Brightness
+measurementtime,Time
+rainin,Rain_Index
+tempf,Temperature
+winddir,Wind
+winddir_avg2m,Wind
+windgustdir,Speed
+windgustdir_10m,Speed
+windgustmph,Speed
+windgustmph_10m,Speed
+windspdmph_avg2m,Speed
+windspeedmph,Speed
+temp0,Temperature
+temp1,Temperature
+temp2,Temperature
+temp3,Temperature
+temp4,Temperature
+humidity,Humidity
+light,Brightness
+temperature,Temperature
+colortemp,Temperature
+illuminance,Brightness
+lastmotion,Motion
+maxpower,Power
+temperature,Temperature
+Humidity percentage,Humidity
+Pressure in hPa,Pressure
+Temperature in Celcius,Temperature
+Light (0-1024),Brightness
+Radiation uSv,Radiation

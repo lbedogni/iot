@@ -1,0 +1,38 @@
+<md-dialog aria-label="Register dialog" layout="column" flex="30" > 
+    <md-dialog-content layout="column" layout="center center" >
+        <md-toolbar>
+            <h2 class="md-toolbar-tools md-dialog-title">
+                <span> Registration </span>
+            </h2>
+        </md-toolbar>
+        <md-content layout="column" class="md-padding">
+            <md-input-container>
+                <label>Username</label>
+                <input type="username" ng-model="credentials.username" required>
+            </md-input-container>
+
+             <md-input-container>
+                <label>Email</label>
+                <input type="email" ng-model="credentials.email" required>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="credentials.password" required>
+            </md-input-container>
+
+             <md-input-container>
+                <label>Confirm Password</label>
+                <input type="password" ng-model="credentials.repeatPassword" required>
+            </md-input-container>
+        </md-content>    
+    </md-dialog-content> 
+    <md-dialog-actions class="md-dialog-footer"> 
+        <md-button ng-click="register()" class="md-raised md-confirm-button"> 
+            Sign up
+        </md-button> 
+        <md-button ng-click="closeDialog()" class="md-raised  md-cancel-button"> 
+            Cancel 
+        </md-button> 
+    </md-dialog-actions> 
+</md-dialog>
