@@ -1,5 +1,6 @@
 import MySQLdb
 import dbsettings
+from datetime import datetime
 
 db = None
 cur = None
@@ -22,6 +23,21 @@ def finish():
 	global db
 	db.close()
 
+# Get all devices owned by a certain participant
+def findAllDevices(participant):
+	devices = []
+	try:
+		cur.execute("SELECT `ID`,`daycount` FROM `Devices` WHERE (`participant_ID` = '" + participant + "')")
+		for dev in cur.fetchall():
+			d = {}
+			d['id'] = int(dev[0].split("_")[1])
+			d['daycount'] = int(dev[1])
+			devices.append(d)
+	except:
+		return None
+	return devices
+
+# Get and set the next index in thingspeak to be fetched for new metadata
 def getThingspeakNextChannel():
 	try:
 		cur.execute("SELECT `Value` FROM `Global` WHERE (`VarName` = 'TS_COUNTER')")
@@ -34,6 +50,20 @@ def setThingspeakNextChannel(value):
 		db.commit()
 	except:
 		db.rollback()
+		
+# Set the daycount for a specific Device
+def setDayCount(ID, newVal):
+	try:
+		cur.execute("UPDATE `Devices` SET `daycount`='" + newVal + "' WHERE (`ID`='" + ID + "')")		
+		db.commit()
+	except:
+		db.rollback()
+		
+def calculateDaycount(start, end):
+	start_time = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
+	end_time = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
+	return min(max(0, ((end_time - start_time).days - 1)), 30)
+	
 # Get the next channel to be examined at this round (saved into a file)
 # Also get how many channels we are about to examine
 def getNextChannel(participant):
@@ -66,7 +96,8 @@ def esc(word):
 # Convert ThingSpeak Datetime to DB datetime format
 def TSToDatetime(string_datetime):
 	return string_datetime.replace("T"," ").replace("Z","")
-	
+
+# Check if the device exists	
 def IsDevice(device_ID):
 	cur.execute("SELECT * FROM `Devices` WHERE ID = '" + device_ID + "'")
 	duplicate = len(cur.fetchall())
@@ -103,11 +134,34 @@ def insertStream(stream_name, stream_class, creation_timestamp, description, ele
 
 # Insert a Measurement in the DB	
 def insertMeasurement(stream_id, lat, lon, value, timestamp):
-	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `value`, `timestamp`) VALUES ('" + stream_id + "','" + lat + "','" + lon + "','" + value + "','" + timestamp + "')")
+	print timestamp
+	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `MGRS_coordinates`, `value`, `timestamp`) VALUES ('" + stream_id + "','" + lat + "','" + lon + "','0','" + value + "','" + timestamp + "')")
 	try:
 		db.commit()
 	except:
 		db.rollback()
+		
+# Insert a Measurement in the DB	
+def insertMultipleMeasurements(valuesString):
+	print "about to insert stuff"
+	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `MGRS_coordinates`, `value`, `timestamp`) VALUES " + valuesString + ";")
+	try:
+		db.commit()
+		print "done"
+	except:
+		db.rollback()
+		print "noooooo"
+		
+# Insert a Measurement in the DB	
+def insertMultipleMeasurementsReduced(valuesString):
+	print "about to insert stuff"
+	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `value`, `timestamp`) VALUES " + valuesString + ";")
+	try:
+		db.commit()
+		print "done"
+	except:
+		db.rollback()
+		print "noooooo"
 		
 # Update a stream with its last entry id and last update timestamp
 def refreshStream(stream_id):
@@ -121,5 +175,37 @@ def refreshStream(stream_id):
 	except:
 		db.rollback()
 		
-
+# Update a stream with its last entry id and last update timestamp
+def refreshStreamSimple(stream_id, timestamp):
+	sql = "UPDATE `DataStreams` SET `last_update_timestamp`='" + timestamp + "' WHERE (ID = '" + stream_id + "')"
+	cur.execute(sql)
+	try:
+		db.commit()
+	except:
+		db.rollback()
+	
+# Get the last update from a device (from one of its streams)	
+def getLastUpdate(device_id):
+	try:
+		cur.execute("SELECT `last_update_timestamp` FROM `DataStreams` WHERE (`device_ID` = '" + device_id + "')")
+		results = cur.fetchall()
+		if len(results) > 0:
+			return results[0][0]
+		else:
+			return None 
+	except:
+		print "getLastUpdate FAILED"
+		return None
+		
+def getDataStream(device_id, name):
+	try:	
+		cur.execute("SELECT `ID` FROM `DataStreams` WHERE (`device_id` = '" + device_id + "' AND `name` = '" + name + "')")
+		results = cur.fetchall()
+		if len(results) > 0:
+			return int(results[0][0])
+		else:
+			return None
+	except:
+		print "getDataStream FAILED"
+		return None
 			
