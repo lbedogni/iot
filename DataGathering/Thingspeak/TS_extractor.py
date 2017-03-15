@@ -116,70 +116,70 @@ def get_last_update(streamId):
 def updateMeasurements(ID):
 	new_daycount = 0
 	
-	try:
-		print "Executing for ID " + str(ID)
-		# Get the old last update (from database)
-		OldUpdate = dbcalls.getLastUpdate(THINGSPEAK_PREFIX + str(ID))
-		if OldUpdate == None:
-			return 365 # Meaning that the channel has no streams
-			
-		# Get the JSON for the whole data channel (1 second after our last update)
-		print "fetching " + str(ID)
-		f = requests.get("https://thingspeak.com/channels/" + str(ID) + "/feed.json?results=8000&start=" + datetime.strftime((OldUpdate + timedelta(0,1)), "%Y-%m-%d %H:%M:%S"))
-		page = json.loads(f.content)
-		channel = page['channel']
-		stream_ids = {}
+	#try:
+	print "Executing for ID " + str(ID)
+	# Get the old last update (from database)
+	OldUpdate = dbcalls.getLastUpdate(THINGSPEAK_PREFIX + str(ID))
+	if OldUpdate == None:
+		return 365 # Meaning that the channel has no streams
 		
-		# Name conversion for fields
-		for k in channel.keys():
-			if "field" in k:
-				stream_id = dbcalls.getDataStream(THINGSPEAK_PREFIX + str(ID), channel[k])
-				if stream_id == None:
-					return
-				stream_ids[k] = stream_id
-		print stream_ids		
-		
-		insert_string = ""
-		first = True
-		first_timestamp = None
-		for feed in page['feeds']:
-			timestamp = feed['created_at']
-			
-			# Save the first timestamp to calculate new daycount
-			if first:
-				first = False
-				first_timestamp = dbcalls.TSToDatetime(timestamp)
-					
-			# Insert measurement for each stream
-			for k in feed.keys():
-				if "field" in k:
-					try:
-						value = float(feed[k])
-					except:
-						continue
-					stream = stream_ids[k]
-					insert_string += "(" + ",".join(["'"+str(stream)+"'", "'"+str(channel["latitude"])+"'", "'"+str(channel["longitude"])+"'", "'-1'", "'"+str(value)+"'", "'"+dbcalls.TSToDatetime(timestamp)+"'"]) + "),"
-					#insert_string += "(" + ",".join(["'"+str(stream)+"'", "'"+str(value)+"'", "'"+dbcalls.TSToDatetime(timestamp)+"'"]) + ")," # Reduced version
-					#dbcalls.insertMeasurement(str(stream), str(channel["latitude"]), str(channel["longitude"]), str(value), dbcalls.TSToDatetime(timestamp))
-		insert_string = insert_string[:-1]
-		print "Inserting..."
-		if len(insert_string) > 5: # 5 is just a tolerance interval 		
-			dbcalls.insertMultipleMeasurements(insert_string)
-			#dbcalls.insertMultipleMeasurementsReduced(insert_string)
-		print "Insertion done"
-		
-		# Update last timestamp
-		last_timestamp = dbcalls.TSToDatetime(channel['updated_at'])
-		for k in stream_ids:
-			dbcalls.refreshStreamSimple(str(stream_ids[k]), last_timestamp)
-		
-		if len(page['feeds']) > 0:
-			new_daycount = dbcalls.calculateDaycount(first_timestamp, datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S"))
-		else:
-			new_daycount = dbcalls.calculateDaycount(last_timestamp, datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S"))
+	# Get the JSON for the whole data channel (1 second after our last update)
+	print "fetching " + str(ID)
+	f = requests.get("https://thingspeak.com/channels/" + str(ID) + "/feed.json?results=8000&start=" + datetime.strftime((OldUpdate + timedelta(0,1)), "%Y-%m-%d %H:%M:%S"))
+	page = json.loads(f.content)
+	channel = page['channel']
+	stream_ids = {}
 	
-	except:
-		print "Unexpected error:", sys.exc_info()[0]
+	# Name conversion for fields
+	for k in channel.keys():
+		if "field" in k:
+			stream_id = dbcalls.getDataStream(THINGSPEAK_PREFIX + str(ID), channel[k])
+			if stream_id == None:
+				return
+			stream_ids[k] = stream_id
+	print stream_ids		
+	
+	insert_string = ""
+	first = True
+	first_timestamp = None
+	for feed in page['feeds']:
+		timestamp = feed['created_at']
+		
+		# Save the first timestamp to calculate new daycount
+		if first:
+			first = False
+			first_timestamp = dbcalls.TSToDatetime(timestamp)
+				
+		# Insert measurement for each stream
+		for k in feed.keys():
+			if "field" in k:
+				try:
+					value = float(feed[k])
+				except:
+					continue
+				stream = stream_ids[k]
+				insert_string += "(" + ",".join(["'"+str(stream)+"'", "'"+str(channel["latitude"])+"'", "'"+str(channel["longitude"])+"'", "'-1'", "'"+str(value)+"'", "'"+dbcalls.TSToDatetime(timestamp)+"'"]) + "),"
+				#insert_string += "(" + ",".join(["'"+str(stream)+"'", "'"+str(value)+"'", "'"+dbcalls.TSToDatetime(timestamp)+"'"]) + ")," # Reduced version
+				#dbcalls.insertMeasurement(str(stream), str(channel["latitude"]), str(channel["longitude"]), str(value), dbcalls.TSToDatetime(timestamp))
+	insert_string = insert_string[:-1]
+	print "Inserting..."
+	if len(insert_string) > 5: # 5 is just a tolerance interval 		
+		dbcalls.insertMultipleMeasurements(insert_string)
+		#dbcalls.insertMultipleMeasurementsReduced(insert_string)
+	print "Insertion done"
+	
+	# Update last timestamp
+	last_timestamp = dbcalls.TSToDatetime(channel['updated_at'])
+	for k in stream_ids:
+		dbcalls.refreshStreamSimple(str(stream_ids[k]), last_timestamp)
+	
+	if len(page['feeds']) > 0:
+		new_daycount = dbcalls.calculateDaycount(first_timestamp, datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S"))
+	else:
+		new_daycount = dbcalls.calculateDaycount(last_timestamp, datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S"))
+	
+	#except:
+	#	print "Unexpected error:", sys.exc_info()[0]
 		
 	return new_daycount
 	
