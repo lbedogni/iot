@@ -35,12 +35,15 @@ def main():
     jsonarr = []
     data = {}
     data['user'] = 1414
-    data['time'] = 45678976543543242
-    data['sensor'] = 5
-    data['lat'] = 44.5038454
-    data['long'] = 11.368444
-    data['value'] = 13.3232
-
+    #data['subscription'] = []
+    subscription = {}
+    #data['id'] = 1
+    #~ data['time'] = 45678976543543242
+    #~ data['sensor'] = 5
+    #~ data['lat'] = 44.5038454
+    #~ data['long'] = 11.368444
+    #~ data['value'] = 13.3232
+    #data['subscription'].append(subscription)
     jsonarr.append(data)
 
     json_arr = json.dumps(jsonarr)
@@ -51,8 +54,8 @@ def main():
 
     # coap://127.0.0.1/myresp
     request = Message(code=POST, payload=bytereprArr)
-    request.opt.uri_host = '127.0.0.1'
-    request.opt.uri_path = ("sensing_send",)
+    request.opt.uri_host = '130.136.37.15'
+    request.opt.uri_path = ("get_subscriptions",)
 
     try:
         response = yield from protocol.request(request).response
