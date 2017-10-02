@@ -84,9 +84,9 @@ def get_metadata_stream(begin, end):
 		
 		# If the channel is new we should insert all its metadata
 		if dbcalls.IsDevice(device_ID) > 0:
-			print "Channel " + str(i) + " has already been stored."
+			print ("Channel " + str(i) + " has already been stored.")
 		else:
-			print "Evaluating channel " + str(i) + "..."
+			print ("Evaluating channel " + str(i) + "...")
 			url = "https://thingspeak.com/channels/" + str(i) + "/feed.json"
 			
 			try:
@@ -101,7 +101,7 @@ def get_metadata_stream(begin, end):
 					if item not in chan.keys():
 						chan[item] = ""
 				if (chan['latitude'] == "0.0") or (chan['latitude'] == "") or (chan['longitude'] == "0.0") or (chan['longitude'] == ""):
-					print "Channel " + str(i) + " not geolocated."
+					print ("Channel " + str(i) + " not geolocated.")
 					continue
 					
 				# Get the data fields (the STREAMS)
@@ -140,14 +140,14 @@ def get_metadata_stream(begin, end):
 				
 			# "channel" field not found
 			except KeyError:
-				print "HTTP 404 Response"
+				print ("HTTP 404 Response")
 
 			# We pass those 'cause we might have some private streams	
 			except HTTPError:
 				pass
 				
 			except TypeError:
-				print "This is a Private Channel..."
+				print ("This is a Private Channel...")
 				
 
 			#~ # What else?
@@ -173,7 +173,7 @@ if __name__ == "__main__":
 		limit = 300
 
 	if start < 0:
-		print "bad error"
+		print ("bad error")
 		exit(0)
 
 	pointer = get_metadata_stream(start, start + limit)
