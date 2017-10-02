@@ -73,7 +73,7 @@ def getNextChannel(participant):
 			limit = f.readline().strip()
 			return int(start), int(limit)
 	except:
-		print "No file found or bad recording format"
+		print("No file found or bad recording format")
 		return 0, MIN_LIMIT
 
 # Set the next channel to be examined at the next round	(saved into a file)
@@ -110,7 +110,7 @@ def insertDevice(device_ID, device_name, device_type, participant_id, daycount):
 		cur.execute("INSERT INTO `Devices` (`ID`, `name`, `device_type`, `participant_ID`, `daycount`) VALUES ('" + device_ID + "', '" + esc(device_name) + "', '" + device_type + "', '" + participant_id + "', '" + daycount + "');")
 		db.commit()
 	except:
-		print "error"
+		print("error")
 		db.rollback()
 
 # Insert a stream in the DB and get back its ID
@@ -128,13 +128,13 @@ def insertStream(stream_name, stream_class, creation_timestamp, description, ele
 		cur.execute("SELECT `ID` FROM `DataStreams` WHERE (name = '" + esc(stream_name) + "') AND (device_ID = '" + device_ID + "')")
 		stream_id = str(cur.fetchall()[0][0])
 	except:
-		print "error"
+		print("error")
 		db.rollback()
 	return stream_id
 
 # Insert a Measurement in the DB	
 def insertMeasurement(stream_id, lat, lon, value, timestamp):
-	print timestamp
+	print(timestamp)
 	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `MGRS_coordinates`, `value`, `timestamp`) VALUES ('" + stream_id + "','" + lat + "','" + lon + "','0','" + value + "','" + timestamp + "')")
 	try:
 		db.commit()
@@ -143,25 +143,25 @@ def insertMeasurement(stream_id, lat, lon, value, timestamp):
 		
 # Insert a Measurement in the DB	
 def insertMultipleMeasurements(valuesString):
-	print "about to insert stuff"
+	print("about to insert stuff")
 	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `MGRS_coordinates`, `value`, `timestamp`) VALUES " + valuesString + ";")
 	try:
 		db.commit()
-		print "done"
+		print("done")
 	except:
 		db.rollback()
-		print "noooooo"
+		print("noooooo")
 		
 # Insert a Measurement in the DB	
 def insertMultipleMeasurementsReduced(valuesString):
-	print "about to insert stuff"
+	print("about to insert stuff")
 	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `value`, `timestamp`) VALUES " + valuesString + ";")
 	try:
 		db.commit()
-		print "done"
+		print("done")
 	except:
 		db.rollback()
-		print "noooooo"
+		print("noooooo")
 		
 # Update a stream with its last entry id and last update timestamp
 def refreshStream(stream_id):
@@ -194,7 +194,7 @@ def getLastUpdate(device_id):
 		else:
 			return None 
 	except:
-		print "getLastUpdate FAILED"
+		print("getLastUpdate FAILED")
 		return None
 		
 def getDataStream(device_id, name):
@@ -206,6 +206,6 @@ def getDataStream(device_id, name):
 		else:
 			return None
 	except:
-		print "getDataStream FAILED"
+		print("getDataStream FAILED")
 		return None
 			
