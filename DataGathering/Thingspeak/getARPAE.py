@@ -87,9 +87,11 @@ for stat in stations:
 
 	ii = str(items[1]).split("<br>")
 	lat = lng = -1
+	print(ii)
 	for item in ii:
 		if "Indirizzo" in str(item):
 			dev_id = (PROV + "_" + item.split("</b>")[1].strip().replace("'", ""))[0:32]
+			print(dev_id)
 		if "Latitudine" in str(item):
 			lat = item.split("</b>")[1].strip()
 		if "Longitudine" in str(item):
