@@ -144,8 +144,8 @@ def insertMeasurement(stream_id, lat, lon, value, timestamp):
 # Insert a Measurement in the DB	
 def insertMultipleMeasurements(valuesString):
 	print("about to insert stuff")
-	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `MGRS_coordinates`, `value`, `timestamp`) VALUES " + valuesString + ";")
 	try:
+    	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `GPS_latitude`, `GPS_longitude`, `MGRS_coordinates`, `value`, `timestamp`) VALUES " + valuesString + ";")
 		db.commit()
 		print("done")
 	except:
@@ -155,8 +155,8 @@ def insertMultipleMeasurements(valuesString):
 # Insert a Measurement in the DB	
 def insertMultipleMeasurementsReduced(valuesString):
 	print("about to insert stuff")
-	cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `value`, `timestamp`) VALUES " + valuesString + ";")
 	try:
+        cur.execute("INSERT INTO `Measurements`(`data_stream_ID`, `value`, `timestamp`) VALUES " + valuesString + ";")
 		db.commit()
 		print("done")
 	except:
