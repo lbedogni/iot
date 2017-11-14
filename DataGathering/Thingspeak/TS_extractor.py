@@ -127,7 +127,12 @@ def updateMeasurements(ID):
 	print "fetching " + str(ID)
 	f = requests.get("https://thingspeak.com/channels/" + str(ID) + "/feed.json?results=8000&start=" + datetime.strftime((OldUpdate + timedelta(0,1)), "%Y-%m-%d %H:%M:%S"))
 	page = json.loads(f.content)
-	channel = page['channel']
+    try:    
+	    channel = page['channel']
+    except:
+        print "This channel has gone"
+        return
+
 	stream_ids = {}
 	
 	# Name conversion for fields
